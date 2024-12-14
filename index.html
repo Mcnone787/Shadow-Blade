@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Plataformas</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const player = {
+            x: 0,
+            y: canvas.height-80,
+            width: 80,
+            height: 80,
+            isMoving: false,
+            speed: 5
+        };
+
+        // Arrays para almacenar las imágenes cargadas
+        const loadedImages = {
+            quiet: [],
+            walk: []
+        };
+
+        let currentFrame = 0;
+        let frameCount = 0;
+        const staggerFrames = 8;
+
+        // Función para cargar una imagen
+        function loadImage(src) {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = () => resolve(img);
+                img.onerror = reject;
+                img.src = src;
+            });
+        }
+
+        // Cargar todas las imágenes
+        async function loadAllImages() {
+            const quietPaths = [
+                'spirtessepardes/spritequieto/quieto1.png',
+                'spirtessepardes/spritequieto/quieto2.png',
+                'spirtessepardes/spritequieto/quieto3.png',
+                'spirtessepardes/spritequieto/quieto4.png'
+            ];
+
+            const walkPaths = [
+                'spirtessepardes/spriteCaminar/caminar1.png',
+                'spirtessepardes/spriteCaminar/caminar2.png',
+                'spirtessepardes/spriteCaminar/caminar3.png',
+                'spirtessepardes/spriteCaminar/caminar4.png',
+                'spirtessepardes/spriteCaminar/caminar5.png',
+                'spirtessepardes/spriteCaminar/caminar6.png'
+            ];
+
+            // Cargar imágenes quieto
+            for (const path of quietPaths) {
+                const img = await loadImage(path);
+                loadedImages.quiet.push(img);
+            }
+
+            // Cargar imágenes caminar
+            for (const path of walkPaths) {
+                const img = await loadImage(path);
+                loadedImages.walk.push(img);
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            frameCount++;
+            if (frameCount % staggerFrames === 0) {
+                if (player.isMoving) {
+                    currentFrame = (currentFrame + 1) % loadedImages.walk.length;
+                } else {
+                    currentFrame = (currentFrame + 1) % loadedImages.quiet.length;
+                }
+            }
+
+            const currentImage = player.isMoving ? 
+                loadedImages.walk[currentFrame] : 
+                loadedImages.quiet[currentFrame];
+
+            if (currentImage) {
+                ctx.drawImage(
+                    currentImage,
+                    player.x,
+                    player.y,
+                    player.width,
+                    player.height
+                );
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        // Control de teclado
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                player.isMoving = true;
+                player.x += player.speed;
+            } else if (e.key === 'ArrowLeft') {
+                player.isMoving = true;
+                player.x -= player.speed;
+            }
+        });
+
+        document.addEventListener('keyup', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                player.isMoving = false;
+            }
+        });
+
+        // Iniciar el juego
+        async function startGame() {
+            await loadAllImages();
+            animate();
+        }
+
+        startGame();
+    </script>
+</body>
+</html>
