@@ -7,8 +7,8 @@ var downicon = document.getElementById("downicon");
 // Al inicio del archivo, verificar si ya cargó antes
 const hasLoaded = localStorage.getItem('gameLoaded');
 
-if (hasLoaded) {
-    // Versión rápida para usuarios que ya visitaron
+// Función para mostrar el mensaje rápido
+function showQuickStartOverlay() {
     const quickStartOverlay = document.createElement('div');
     quickStartOverlay.style.cssText = `
         position: fixed;
@@ -44,7 +44,11 @@ if (hasLoaded) {
 
     document.addEventListener('keydown', startGame, { once: true });
     document.addEventListener('click', startGame, { once: true });
+}
 
+// Verificar si venimos de otra página (usando history)
+if (performance.navigation.type === 2 || hasLoaded) {
+    showQuickStartOverlay();
 } else {
     // Pantalla de carga original para primera visita
     const gameStartOverlay = document.createElement('div');
@@ -253,34 +257,70 @@ if (hasLoaded) {
     });
 }
 
+// Funciones para el control de audio
+function saveAudioState() {
+    sessionStorage.setItem('audioPlaying', !audio.paused);
+    sessionStorage.setItem('audioVolume', audio.volume);
+    sessionStorage.setItem('audioTime', audio.currentTime);
+    sessionStorage.setItem('audioMuted', audio.muted);
+}
+
+function restoreAudioState() {
+    const wasPlaying = sessionStorage.getItem('audioPlaying') === 'true';
+    const savedVolume = parseFloat(sessionStorage.getItem('audioVolume'));
+    const savedTime = parseFloat(sessionStorage.getItem('audioTime'));
+    const wasMuted = sessionStorage.getItem('audioMuted') === 'true';
+
+    if (!isNaN(savedVolume)) {
+        audio.volume = savedVolume;
+    }
+    
+    if (!isNaN(savedTime)) {
+        audio.currentTime = savedTime;
+    }
+
+    audio.muted = wasMuted;
+    if (wasMuted) {
+        volumeicon.style.display = "none";
+        muteicon.style.display = "block";
+    }
+}
+
+// Event listeners
 volumeicon.addEventListener("click", cambio);
+muteicon.addEventListener("click", cambio2);
+upicon.addEventListener("click", up);
+downicon.addEventListener("click", down);
 
 function cambio(){
     volumeicon.style.display = "none";
     muteicon.style.display = "block";
     audio.muted = true;
+    saveAudioState();
 }
-
-muteicon.addEventListener("click", cambio2);
 
 function cambio2(){
     volumeicon.style.display = "block";
     muteicon.style.display = "none";
     audio.muted = false;
+    saveAudioState();
 }
 
-upicon.addEventListener("click", up);
-downicon.addEventListener("click", down);
-
 function up(){
-    const newVolume = audio.volume + 0.2;
+    const newVolume = audio.volume + 0.1;
     audio.volume = Math.min(1, newVolume);
+    saveAudioState();
 }
 
 function down(){
-    const newVolume = audio.volume - 0.2;
+    const newVolume = audio.volume - 0.1;
     audio.volume = Math.max(0, newVolume);
+    saveAudioState();
 }
+
+// Event listeners para guardar/restaurar estado
+window.addEventListener('beforeunload', saveAudioState);
+document.addEventListener('DOMContentLoaded', restoreAudioState);
 
 const audioPrompt = document.createElement('div');
 audioPrompt.style.cssText = `
