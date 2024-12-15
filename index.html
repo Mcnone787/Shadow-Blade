@@ -111,7 +111,7 @@
         let score = 0;
         let playerHealth = 100;
         const MAX_PLAYER_HEALTH = 100;
-        let enemySpawnTimer = 0;
+        let enemySpawnTimer = Date.now(); // Inicializar el timer
         const ENEMY_SPAWN_INTERVAL = 5000; // Spawn cada 5 segundos
 
         // Clase Enemigo
@@ -208,7 +208,6 @@
                 for (let i = this.projectiles.length - 1; i >= 0; i--) {
                     const projectile = this.projectiles[i];
                     
-                    // Mover proyectil
                     projectile.x += projectile.velocityX;
                     projectile.y += projectile.velocityY;
                     
@@ -218,7 +217,7 @@
                         projectile.y < player.y + player.height &&
                         projectile.y + projectile.height > player.y) {
                         
-                        playerHealth -= 10; // Daño del proyectil
+                        playerHealth = Math.max(0, playerHealth - 10); // Asegurar que no baje de 0
                         this.projectiles.splice(i, 1);
                         continue;
                     }
@@ -232,80 +231,39 @@
             }
 
             update() {
-                const oldX = this.x;
-                const oldY = this.y;
-
-                // Calcular distancia al jugador
-                const distX = player.x - this.x;
-                const distY = player.y - this.y;
-
-                // Determinar dirección hacia el jugador
-                this.isMovingLeft = distX < 0;
-
-                // Movimiento horizontal hacia el jugador
-                if (this.isMovingLeft) {
-                    this.x -= this.velocityX;
-                } else {
-                    this.x += this.velocityX;
-                }
-
-                // Verificar colisión con otros enemigos
-                if (this.checkEnemyCollisions()) {
-                    this.x = oldX; // Revertir movimiento si hay colisión
-                }
-
-                // Verificar colisión con el jugador
-                if (this.checkPlayerCollision()) {
-                    this.x = oldX; // Revertir movimiento si hay colisión
-                }
-
-                // Saltar si el jugador está arriba
-                if (this.isOnGround && distY < -50) {
-                    this.velocityY = this.jumpForce;
-                    this.isOnGround = false;
-                }
+                // Movimiento horizontal
+                this.x += this.isMovingLeft ? -this.velocityX : this.velocityX;
 
                 // Aplicar gravedad
-                this.velocityY += this.gravity;
+                if (!this.isOnGround) {
+                    this.velocityY += this.gravity;
+                    if (this.velocityY > 15) this.velocityY = 15;
+                }
                 this.y += this.velocityY;
 
-                // Verificar colisiones después del movimiento vertical
-                if (this.checkEnemyCollisions() || this.checkPlayerCollision()) {
-                    this.y = oldY;
-                    this.velocityY = 0;
-                }
-
-                // Colisión con plataformas
-                this.isOnGround = false;
-                platforms.forEach(platform => {
-                    if (this.x + this.width > platform.x && 
-                        this.x < platform.x + platform.width &&
-                        this.y + this.height > platform.y &&
-                        this.y + this.height < platform.y + platform.height + 10) {
-                        
-                        if (this.velocityY > 0) {
-                            this.y = platform.y - this.height;
-                            this.velocityY = 0;
-                            this.isOnGround = true;
-                        }
-                    }
-                });
-
-                // Límites del canvas
-                if (this.x <= 0) {
-                    this.x = 0;
-                    this.isMovingLeft = false;
-                }
-                if (this.x + this.width >= canvas.width) {
-                    this.x = canvas.width - this.width;
-                    this.isMovingLeft = true;
-                }
-
-                // Límite del suelo
-                if (this.y + this.height > canvas.height - 20) {
-                    this.y = canvas.height - 20 - this.height;
+                // Colisión con el suelo
+                if (this.y + this.height > canvas.height) {
+                    this.y = canvas.height - this.height;
                     this.velocityY = 0;
                     this.isOnGround = true;
+                }
+
+                // Evitar al jugador
+                if (this.x < player.x + player.width &&
+                    this.x + this.width > player.x &&
+                    this.y < player.y + player.height &&
+                    this.y + this.height > player.y) {
+                    
+                    if (this.x < player.x) {
+                        this.x = player.x - this.width - 1;
+                    } else {
+                        this.x = player.x + player.width + 1;
+                    }
+                }
+
+                // Cambiar dirección en los bordes del canvas
+                if (this.x <= 0 || this.x + this.width >= canvas.width) {
+                    this.isMovingLeft = !this.isMovingLeft;
                 }
 
                 this.shoot();
@@ -512,10 +470,18 @@
             }
         }
 
-        // Función para mostrar números de daño (opcional)
+        // Función para mostrar números de daño
         function showDamageNumber(damage, x, y) {
-            ctx.fillStyle = 'white';
-            ctx.font = '20px Arial';
+            // Texto con contorno para el número de daño
+            ctx.font = 'bold 24px Arial';
+            
+            // Contorno negro
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 3;
+            ctx.strokeText(`-${damage}`, x, y - 20);
+            
+            // Texto en rojo brillante
+            ctx.fillStyle = '#FF3030'; // Rojo brillante
             ctx.fillText(`-${damage}`, x, y - 20);
         }
 
@@ -694,7 +660,7 @@
                 const willCollide = player.y + player.height + player.velocityY >= platform.y;
                 
                 if (player.x + player.width > platform.x && 
-                    player.x < platform.x + platform.width && 
+                    player.x < platform.x + platform.width &&
                     ((wasAbove && willCollide) || 
                      (player.y + player.height >= platform.y - COLLISION_MARGIN && 
                       player.y + player.height <= platform.y + COLLISION_MARGIN))) {
@@ -820,82 +786,250 @@
             enemies.push(new Enemy(x, y));
         }
 
+        // Variables globales para el sistema de pausa
+        let isPaused = false;
+        let pauseMenu = {
+            options: ['Continue', 'Save Game', 'Main Menu'],
+            selectedOption: 0,
+            // Agregar coordenadas para cada opción
+            buttonAreas: []
+        };
+
+        // Función para dibujar el menú de pausa
+        function drawPauseMenu() {
+            // Fondo semitransparente oscuro
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Título "PAUSE"
+            ctx.font = 'bold 48px Arial';
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 4;
+            ctx.strokeText('PAUSE', canvas.width/2 - 80, canvas.height/3);
+            ctx.fillStyle = '#FFD700';
+            ctx.fillText('PAUSE', canvas.width/2 - 80, canvas.height/3);
+
+            // Limpiar áreas de botones previas
+            pauseMenu.buttonAreas = [];
+
+            // Opciones del menú
+            ctx.font = 'bold 32px Arial';
+            pauseMenu.options.forEach((option, index) => {
+                const y = canvas.height/2 + (index * 50);
+                const x = canvas.width/2 - 80;
+                const width = 200;
+                const height = 40;
+
+                // Guardar área del botón para detección de click
+                pauseMenu.buttonAreas.push({
+                    x: x - 20,
+                    y: y - 30,
+                    width: width,
+                    height: height,
+                    index: index
+                });
+
+                if (index === pauseMenu.selectedOption) {
+                    ctx.strokeStyle = 'black';
+                    ctx.lineWidth = 4;
+                    ctx.strokeText('> ' + option, x, y);
+                    ctx.fillStyle = '#FFA500';
+                    ctx.fillText('> ' + option, x, y);
+                } else {
+                    ctx.strokeStyle = 'black';
+                    ctx.lineWidth = 2;
+                    ctx.strokeText(option, x, y);
+                    ctx.fillStyle = '#FFFFFF';
+                    ctx.fillText(option, x, y);
+                }
+            });
+        }
+
+        // Función para guardar partida
+        function saveGame() {
+            const gameState = {
+                score: score,
+                playerHealth: playerHealth,
+                playerPosition: { x: player.x, y: player.y },
+                enemies: enemies.map(enemy => ({
+                    x: enemy.x,
+                    y: enemy.y,
+                    health: enemy.health
+                })),
+                platforms: platforms
+            };
+            
+            localStorage.setItem('gameState', JSON.stringify(gameState));
+            
+            // Mostrar mensaje de guardado
+            ctx.fillStyle = '#00FF00';
+            ctx.font = 'bold 24px Arial';
+            ctx.fillText('Game Saved!', canvas.width/2 - 60, canvas.height - 50);
+        }
+
+        // Función para reiniciar completamente el juego
+        function resetGame() {
+            playerHealth = MAX_PLAYER_HEALTH;
+            score = 0;
+            enemies = [];
+            player.x = 50; // Posición inicial del jugador
+            player.y = canvas.height - 100;
+            player.velocityY = 0;
+            player.isJumping = false;
+            player.isOnGround = true;
+            generatePlatforms();
+            enemySpawnTimer = Date.now();
+            isPaused = false;
+        }
+
+        // Función para volver al menú principal
+        function returnToMainMenu() {
+            // Si tienes una URL específica para el menú principal:
+            window.location.href = 'menu.html'; // Cambia esto a tu URL del menú
+            
+            // O si el menú está en la misma página pero con un parámetro:
+            // window.location.href = 'index.html?screen=menu';
+            
+            // O simplemente recargar la página:
+            // window.location.reload();
+        }
+
+        // Función animate modificada
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
-            // Dibujar plataformas
-            platforms.forEach(platform => {
-                ctx.fillStyle = 'green';
-                ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+            if (!isPaused) {
+                if (playerHealth <= 0) {
+                    if (showGameOver()) {
+                        requestAnimationFrame(animate);
+                        return;
+                    }
+                }
+                // Spawn de enemigos
+                if (Date.now() - enemySpawnTimer > ENEMY_SPAWN_INTERVAL) {
+                    spawnEnemy();
+                    enemySpawnTimer = Date.now();
+                }
+
+                // Actualizar posiciones
+                updatePlayerPosition();
+                enemies.forEach(enemy => enemy.update());
                 
-                // Hitbox de plataformas
-                if (mostrarHitboxes) {
-                    ctx.strokeStyle = 'white';
-                    ctx.strokeRect(platform.x, platform.y, platform.width, platform.height);
-                }
-            });
-            
-            updatePlayerPosition();
-            
-            // Dibujar y actualizar enemigos
-            enemies.forEach(enemy => {
-                enemy.update();
-                enemy.draw();
+                // Dibujar elementos del juego
+                platforms.forEach(platform => {
+                    ctx.fillStyle = 'green';
+                    ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+                });
                 
-                // Hitbox de enemigos
+                drawPlayer();
+                enemies.forEach(enemy => enemy.draw());
+                drawHUD();
+                
                 if (mostrarHitboxes) {
-                    ctx.strokeStyle = 'blue';
-                    ctx.lineWidth = 2;
-                    ctx.strokeRect(enemy.x, enemy.y, enemy.width, enemy.height);
+                    dibujarHitboxes();
                 }
-            });
-
-            // PRIMERO: Dibujar el sprite del jugador
-            drawPlayer();
-
-            // DESPUÉS: Dibujar las hitboxes
-            if (mostrarHitboxes) {
-                // Hitbox del jugador
-                ctx.strokeStyle = 'red';
-                ctx.lineWidth = 2;
-                ctx.strokeRect(player.x, player.y, player.width, player.height);
-
-                // Hitbox del ataque
-                if (player.isAttacking) {
-                    const attackRange = 80;
-                    ctx.strokeStyle = 'yellow';
-                    ctx.lineWidth = 2;
-                    ctx.strokeRect(
-                        player.isMovingLeft ? player.x - attackRange : player.x + player.width,
-                        player.y,
-                        attackRange,
-                        player.height
-                    );
-                }
-            }
-
-            checkAttackCollisions();
-
-            // Spawn de enemigos
-            if (Date.now() - enemySpawnTimer > ENEMY_SPAWN_INTERVAL) {
-                spawnEnemy();
-                enemySpawnTimer = Date.now();
-            }
-            
-            // Dibujar HUD
-            drawHUD();
-            
-            // Game Over check
-            if (playerHealth <= 0) {
-                // Implementar lógica de Game Over
-                ctx.fillStyle = 'red';
-                ctx.font = '48px Arial';
-                ctx.fillText('GAME OVER', canvas.width/2 - 100, canvas.height/2);
-                return; // Detener el juego
+                
+                checkAttackCollisions();
+            } else {
+                // Dibujar el juego en pausa
+                platforms.forEach(platform => {
+                    ctx.fillStyle = 'green';
+                    ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+                });
+                drawPlayer();
+                enemies.forEach(enemy => enemy.draw());
+                drawHUD();
+                drawPauseMenu();
             }
             
             requestAnimationFrame(animate);
         }
+
+        // Event listener para clicks del ratón
+        canvas.addEventListener('click', (e) => {
+            if (isPaused) {
+                const rect = canvas.getBoundingClientRect();
+                const clickX = e.clientX - rect.left;
+                const clickY = e.clientY - rect.top;
+
+                pauseMenu.buttonAreas.forEach(button => {
+                    if (clickX >= button.x && 
+                        clickX <= button.x + button.width &&
+                        clickY >= button.y && 
+                        clickY <= button.y + button.height) {
+                        
+                        switch(button.index) {
+                            case 0: // Continue
+                                isPaused = false;
+                                break;
+                            case 1: // Save Game
+                                saveGame();
+                                break;
+                            case 2: // Main Menu
+                                returnToMainMenu();
+                                break;
+                        }
+                    }
+                });
+            }
+        });
+
+        // Event listener para hover del ratón
+        canvas.addEventListener('mousemove', (e) => {
+            if (isPaused) {
+                const rect = canvas.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left;
+                const mouseY = e.clientY - rect.top;
+
+                let hoveredOption = -1;
+                pauseMenu.buttonAreas.forEach(button => {
+                    if (mouseX >= button.x && 
+                        mouseX <= button.x + button.width &&
+                        mouseY >= button.y && 
+                        mouseY <= button.y + button.height) {
+                        hoveredOption = button.index;
+                    }
+                });
+
+                if (hoveredOption !== -1) {
+                    pauseMenu.selectedOption = hoveredOption;
+                }
+            }
+        });
+
+        // Event listeners para el menú de pausa
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                isPaused = !isPaused;
+                if (!isPaused) {
+                    pauseMenu.selectedOption = 0; // Resetear selección
+                }
+            }
+
+            if (isPaused) {
+                switch(e.key) {
+                    case 'ArrowUp':
+                        pauseMenu.selectedOption = (pauseMenu.selectedOption - 1 + pauseMenu.options.length) % pauseMenu.options.length;
+                        break;
+                    case 'ArrowDown':
+                        pauseMenu.selectedOption = (pauseMenu.selectedOption + 1) % pauseMenu.options.length;
+                        break;
+                    case 'Enter':
+                        switch(pauseMenu.selectedOption) {
+                            case 0: // Continue
+                                isPaused = false;
+                                break;
+                            case 1: // Save Game
+                                saveGame();
+                                break;
+                            case 2: // Main Menu
+                                returnToMainMenu();
+                                break;
+                        }
+                        break;
+                }
+            }
+        });
 
         document.addEventListener('keydown', (e) => {
             if (e.key.toLowerCase() in keys) {
@@ -1048,25 +1182,127 @@
             }
         }
 
-        // Agregar HUD para mostrar puntuación y vida
+        // Función para dibujar el HUD con colores mejorados
         function drawHUD() {
-            // Puntuación
-            ctx.fillStyle = 'white';
-            ctx.font = '20px Arial';
-            ctx.fillText(`Score: ${score}`, 10, 30);
+            // Estilo del texto con contorno
+            function drawTextWithOutline(text, x, y, fillColor) {
+                ctx.font = 'bold 24px Arial';
+                // Contorno negro más grueso
+                ctx.strokeStyle = 'black';
+                ctx.lineWidth = 4;
+                ctx.strokeText(text, x, y);
+                // Texto principal con color brillante
+                ctx.fillStyle = fillColor;
+                ctx.fillText(text, x, y);
+            }
 
-            // Barra de vida del jugador
+            // Score con color naranja brillante
+            drawTextWithOutline(`Score: ${score}`, 10, 30, '#FFA500'); // Naranja
+
+            // Barra de vida
             const healthBarWidth = 200;
             const healthBarHeight = 20;
             
-            // Fondo de la barra de vida
-            ctx.fillStyle = 'red';
+            // Contorno negro para la barra de vida
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 3;
+            ctx.strokeRect(8, 48, healthBarWidth + 4, healthBarHeight + 4);
+            
+            // Fondo de la barra de vida en rojo oscuro
+            ctx.fillStyle = '#8B0000';
             ctx.fillRect(10, 50, healthBarWidth, healthBarHeight);
             
-            // Vida actual
-            ctx.fillStyle = 'green';
+            // Vida actual en verde brillante
+            ctx.fillStyle = '#00FF00';
             const currentHealthWidth = (playerHealth / MAX_PLAYER_HEALTH) * healthBarWidth;
             ctx.fillRect(10, 50, currentHealthWidth, healthBarHeight);
+            
+            // Texto de HP en verde claro
+            drawTextWithOutline(`HP: ${playerHealth}/${MAX_PLAYER_HEALTH}`, 220, 67, '#90EE90');
+        }
+
+        // Función Game Over actualizada
+        function showGameOver() {
+            // Fondo semitransparente negro
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.8)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // GAME OVER en rojo brillante
+            ctx.font = 'bold 64px Arial';
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 6;
+            ctx.strokeText('GAME OVER', canvas.width/2 - 150, canvas.height/2);
+            ctx.fillStyle = '#FF0000';
+            ctx.fillText('GAME OVER', canvas.width/2 - 150, canvas.height/2);
+            
+            // Puntuación final
+            ctx.font = 'bold 32px Arial';
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 4;
+            ctx.strokeText(`Final Score: ${score}`, canvas.width/2 - 100, canvas.height/2 + 50);
+            ctx.fillStyle = '#FFA500';
+            ctx.fillText(`Final Score: ${score}`, canvas.width/2 - 100, canvas.height/2 + 50);
+            
+            // Mensaje para reiniciar
+            ctx.font = 'bold 24px Arial';
+            ctx.strokeText('Press R to Restart', canvas.width/2 - 80, canvas.height/2 + 100);
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillText('Press R to Restart', canvas.width/2 - 80, canvas.height/2 + 100);
+
+            // Detener la generación de enemigos y actualización del juego
+            if (playerHealth <= 0) {
+                return true; // Indica que el juego está en estado de Game Over
+            }
+            return false;
+        }
+
+        // Event listener para reiniciar el juego
+        document.addEventListener('keydown', (e) => {
+            if (e.key.toLowerCase() === 'r' && playerHealth <= 0) {
+                resetGame();
+            }
+        });
+
+        // Agregar estas funciones fuera de la clase Enemy
+        function checkPlayerEnemyCollision() {
+            enemies.forEach(enemy => {
+                if (player.x < enemy.x + enemy.width &&
+                    player.x + player.width > enemy.x &&
+                    player.y < enemy.y + enemy.height &&
+                    player.y + player.height > enemy.y) {
+                    
+                    const overlapX = Math.min(
+                        player.x + player.width - enemy.x,
+                        enemy.x + enemy.width - player.x
+                    );
+                    if (player.x < enemy.x) {
+                        player.x -= overlapX;
+                    } else {
+                        player.x += overlapX;
+                    }
+                }
+            });
+        }
+
+        function checkEnemyCollisions() {
+            for (let i = 0; i < enemies.length; i++) {
+                for (let j = i + 1; j < enemies.length; j++) {
+                    const enemy1 = enemies[i];
+                    const enemy2 = enemies[j];
+                    
+                    if (enemy1.x < enemy2.x + enemy2.width &&
+                        enemy1.x + enemy1.width > enemy2.x &&
+                        enemy1.y < enemy2.y + enemy2.height &&
+                        enemy1.y + enemy1.height > enemy2.y) {
+                        
+                        if (enemy1.x < enemy2.x) {
+                            enemy1.x = enemy2.x - enemy1.width - 1;
+                        } else {
+                            enemy1.x = enemy2.x + enemy2.width + 1;
+                        }
+                    }
+                }
+            }
         }
     </script>
 </body>
