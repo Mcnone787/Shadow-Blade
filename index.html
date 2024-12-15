@@ -35,8 +35,9 @@
             height: 80,
             isMoving: false,
             isMovingLeft: false,
+            isAttacking: false,
             isJumping: false,
-            walkSpeed: 6,
+            walkSpeed: 11,
             jumpHeight: 300,
             diagonalSpeed: 8,
             velocityX: 0,
@@ -62,20 +63,49 @@
             jump: {
                 left: [],
                 right: []
+            },
+            attack: {
+                left: [],
+                right: []
             }
         };
 
         let currentFrame = -1;
         let frameCount = 0;
-        const staggerFrames = 5;
+        const staggerFrames = 10;
+        const ATTACK_STAGGER = 5;
         let previousImage = null;
 
         const keys = {
             d: false,
             a: false,
             w: false,
-            ShiftLeft: false
+            ShiftLeft: false,
+            n: false
         };
+
+        const MOVEMENT_SPEED = 6;
+        const GRAVITY = 10;
+        const JUMP_FORCE = -25;
+        const MAX_FALL_SPEED = 20;
+
+        const GRAVITY_UP = 1.2;    // Base de gravedad para subida
+        const GRAVITY_DOWN = 1.2;  // Base de gravedad para caída
+        const INITIAL_JUMP_VELOCITY = -25;  // Reducimos la velocidad inicial para menos altura
+        const HORIZONTAL_BOOST = 1.8; // Factor de impulso horizontal durante el salto
+
+        let saltando = false;
+
+        // Solo mostrar logs cuando hay cambios significativos
+        let ultimoEstadoSuelo = false;
+        let tiempoUltimoCambio = 0;
+        const TIEMPO_MINIMO_CAMBIO = 100; // milisegundos
+
+        let mostrarHitboxes = true;
+
+        let isAttackAnimationComplete = true; // Para controlar si la animación terminó
+        let attackFrame = 0; // Para contar los frames del ataque
+        const ATTACK_FRAMES = 6; // Número total de frames en la animación de ataque
 
         function loadImage(src) {
             return new Promise((resolve, reject) => {
@@ -138,6 +168,32 @@
                 'spirtessepardes/spriteSalto/saltoizquierda7.png',
                 'spirtessepardes/spriteSalto/saltoizquierda8.png',
             ];
+            const attackPathsRight = [
+                'spirtessepardes/spriteAtacar/atacarderecha1.png',
+                'spirtessepardes/spriteAtacar/atacarderecha2.png',
+                'spirtessepardes/spriteAtacar/atacarderecha3.png',
+                'spirtessepardes/spriteAtacar/atacarderecha4.png',
+                'spirtessepardes/spriteAtacar/atacarderecha5.png',
+                'spirtessepardes/spriteAtacar/atacarderecha6.png',
+                
+            ];
+            const attackPathsLeft = [
+                'spirtessepardes/spriteAtacar/atacarizquierda1.png',
+                'spirtessepardes/spriteAtacar/atacarizquierda2.png',
+                'spirtessepardes/spriteAtacar/atacarizquierda3.png',
+                'spirtessepardes/spriteAtacar/atacarizquierda4.png',
+                'spirtessepardes/spriteAtacar/atacarizquierda5.png',
+                'spirtessepardes/spriteAtacar/atacarizquierda6.png',
+         
+            ];
+            for (const path of attackPathsRight) {
+                const img = await loadImage(path);
+                loadedImages.attack.right.push(img);
+            }
+            for (const path of attackPathsLeft) {
+                const img = await loadImage(path);
+                loadedImages.attack.left.push(img);
+            }
             for (const path of jumpPathsRight) {
                 const img = await loadImage(path);
                 loadedImages.jump.right.push(img);
@@ -203,6 +259,7 @@
                 alternateLeft = !alternateLeft; // Alternar lado
             }
 
+
             // Plataforma superior final
             platforms.push({
                 x: canvas.width * 0.4,
@@ -212,95 +269,159 @@
             });
         }
 
-        function checkCollision(rect1, rect2) {
-            return rect1.x < rect2.x + rect2.width &&
-                   rect1.x + rect1.width > rect2.x &&
-                   rect1.y < rect2.y + rect2.height &&
-                   rect1.y + rect1.height > rect2.y;
+        function checkCollisions() {
+            let isOnAnyPlatform = false;
+            let currentPlatformY = canvas.height;
+            const COLLISION_MARGIN = 2;
+
+            // Guardamos la posición anterior para debug
+            console.log(`Pre-colisión - Y: ${player.y}, VelocityY: ${player.velocityY}`);
+
+            platforms.forEach(platform => {
+                const wasAbove = player.y + player.height <= platform.y + COLLISION_MARGIN;
+                const willCollide = player.y + player.height + player.velocityY >= platform.y;
+                
+                if (player.x + player.width > platform.x && 
+                    player.x < platform.x + platform.width && 
+                    ((wasAbove && willCollide) || 
+                     (player.y + player.height >= platform.y - COLLISION_MARGIN && 
+                      player.y + player.height <= platform.y + COLLISION_MARGIN))) {
+                    
+                    isOnAnyPlatform = true;
+                    if (platform.y < currentPlatformY) {
+                        currentPlatformY = platform.y;
+                        player.y = platform.y - player.height;
+                        player.velocityY = 0;
+                        player.isJumping = false;
+                        console.log('Colisión detectada con plataforma');
+                    }
+                }
+            });
+
+            player.isOnGround = isOnAnyPlatform;
+            
+            if (!isOnAnyPlatform && player.y + player.height > canvas.height) {
+                player.y = canvas.height - player.height;
+                player.isOnGround = true;
+                player.velocityY = 0;
+                player.isJumping = false;
+                console.log('Colisión con suelo');
+            }
+
+            // Debug post-colisión
+            console.log(`Post-colisión - Y: ${player.y}, VelocityY: ${player.velocityY}, isJumping: ${player.isJumping}`);
+        }
+
+        function updatePlayerPosition() {
+            // Movimiento horizontal con boost durante el salto
+            if (keys.d && !keys.a) {
+                let speed = MOVEMENT_SPEED;
+                if (!player.isOnGround) {
+                    speed *= HORIZONTAL_BOOST; // Aumentamos velocidad horizontal en el aire
+                }
+                player.x += speed;
+                player.isMoving = true;
+                player.isMovingLeft = false;
+            } else if (keys.a && !keys.d) {
+                let speed = MOVEMENT_SPEED;
+                if (!player.isOnGround) {
+                    speed *= HORIZONTAL_BOOST; // Aumentamos velocidad horizontal en el aire
+                }
+                player.x -= speed;
+                player.isMoving = true;
+                player.isMovingLeft = true;
+            } else {
+                player.isMoving = false;
+            }
+
+            // Lógica de salto
+            if (keys.w && player.isOnGround && !player.isJumping) {
+                player.velocityY = INITIAL_JUMP_VELOCITY;
+                player.isJumping = true;
+                player.isOnGround = false;
+            }
+
+            // Aplicar gravedad si está en el aire
+            if (!player.isOnGround) {
+                if (player.velocityY < 0) {
+                    // Subida más lineal y rápida
+                    player.velocityY += GRAVITY_UP * 0.8;
+                } else {
+                    // Caída rápida pero controlada
+                    if (player.velocityY < 10) {
+                        player.velocityY += GRAVITY_DOWN * 0.9;
+                    } else {
+                        player.velocityY += GRAVITY_DOWN * 1.2;
+                    }
+                }
+            }
+
+            // Limitar velocidad de caída
+            if (player.velocityY > 20) { 
+                player.velocityY = 20;
+            }
+
+            // Actualizar posición vertical
+            player.y += player.velocityY;
+
+            // Verificar límites del canvas
+            if (player.x < 0) player.x = 0;
+            if (player.x + player.width > canvas.width) {
+                player.x = canvas.width - player.width;
+            }
+
+            // Verificar colisiones
+            checkCollisions();
+        }
+
+        // Función para manejar el salto
+        function handleJump() {
+            if (player.isOnGround && !player.isJumping) {
+                player.velocityY = JUMP_FORCE;
+                player.isJumping = true;
+                player.isOnGround = false;
+            }
         }
 
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+            
+            updatePlayerPosition();
+            
             // Dibujar plataformas
-            ctx.fillStyle = '#666';
             platforms.forEach(platform => {
+                ctx.fillStyle = 'green';
                 ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
             });
 
-            // Gravedad y colisiones con plataformas
-            if (!player.isJumping) {
-                let isOnPlatform = false;
-                platforms.forEach(platform => {
-                    if (checkCollision({
-                        x: player.x,
-                        y: player.y + 1,
-                        width: player.width,
-                        height: player.height
-                    }, platform)) {
-                        if (player.y + player.height <= platform.y + 10) {
-                            isOnPlatform = true;
-                            player.y = platform.y - player.height;
-                            player.velocityY = 0;
-                            player.isOnGround = true;
-                        }
-                    }
-                });
-
-                if (!isOnPlatform) {
-                    player.isOnGround = false;
-                    player.velocityY = Math.min(player.velocityY + player.gravity, player.maxFallSpeed);
-                    player.y += player.velocityY;
-                }
-            }
-
-            if (!player.isJumping) {
-                let currentSpeed = keys.ShiftLeft ? player.runSpeed : player.walkSpeed;
-                
-                if (keys.d) {
-                    player.velocityX = currentSpeed;
-                    player.isMoving = true;
-                    player.isMovingLeft = false;
-                    if (player.x + player.velocityX <= canvas.width - player.width) {
-                        player.x += player.velocityX;
-                    }
-                } else if (keys.a) {
-                    player.velocityX = -currentSpeed;
-                    player.isMoving = true;
-                    player.isMovingLeft = true;
-                    if (player.x + player.velocityX >= 0) {
-                        player.x += player.velocityX;
-                    }
-                } else {
-                    player.velocityX = 0;
-                }
-            }
-
             frameCount++;
-            if (frameCount % staggerFrames === 0) {
-                if (player.isJumping) {
-                    if (player.isMovingLeft) {
-                        currentFrame = (currentFrame + 1) % loadedImages.jump.left.length;
-                    } else {
-                        currentFrame = (currentFrame + 1) % loadedImages.jump.right.length;
+            if (frameCount % (player.isAttacking ? ATTACK_STAGGER : staggerFrames) === 0) {
+                if (player.isAttacking) {
+                    currentFrame = (currentFrame + 1) % loadedImages.attack.right.length;
+                    attackFrame++;
+                    
+                    // Verificar si la animación de ataque ha terminado
+                    if (attackFrame >= ATTACK_FRAMES) {
+                        player.isAttacking = false;
+                        isAttackAnimationComplete = true;
+                        attackFrame = 0;
+                        currentFrame = 0;
                     }
+                } else if (player.isJumping) {
+                    currentFrame = (currentFrame + 1) % loadedImages.jump.right.length;
                 } else if (player.isMoving) {
-                    if (player.isMovingLeft) {
-                        currentFrame = (currentFrame + 1) % loadedImages.walk.left.length;
-                    } else {
-                        currentFrame = (currentFrame + 1) % loadedImages.walk.right.length;
-                    }
+                    currentFrame = (currentFrame + 1) % loadedImages.walk.right.length;
                 } else {
-                    if (!player.isMovingLeft) {
-                        currentFrame = (currentFrame + 1) % loadedImages.quiet.right.length;
-                    } else {
-                        currentFrame = (currentFrame + 1) % loadedImages.quiet.left.length;
-                    }
+                    currentFrame = (currentFrame + 1) % loadedImages.quiet.right.length;
                 }
             }
 
             let currentImage;
-            if (player.isJumping) {
+            if (player.isAttacking) {
+                currentImage = player.isMovingLeft ? 
+                    loadedImages.attack.left[currentFrame] : 
+                    loadedImages.attack.right[currentFrame];
+            } else if (player.isJumping) {
                 currentImage = player.isMovingLeft ? 
                     loadedImages.jump.left[currentFrame] : 
                     loadedImages.jump.right[currentFrame];
@@ -337,108 +458,29 @@
         }
 
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'd' || e.key === 'a' || e.key === 'ShiftLeft' || e.key === 'w') {
-                keys[e.key] = true;
-            }
-            
-            if (e.key === 'd') {
-                player.isMoving = true;
-                player.isMovingLeft = false;
-                console.log("derecha");
-            } else if (e.key === 'a') {
-                player.isMoving = true;
-                player.isMovingLeft = true;
-                console.log("izquierda");
-            } else if (e.key === 'w') {
-                if (player.isOnGround && !player.isJumping) {
-                    console.log("salto");
-                    player.isJumping = true;
-                    player.isOnGround = false;
+            if (e.key.toLowerCase() in keys) {
+                keys[e.key.toLowerCase()] = true;
+                if (e.key.toLowerCase() === 'n' && isAttackAnimationComplete) {
+                    player.isAttacking = true;
+                    isAttackAnimationComplete = false;
+                    attackFrame = 0;
                     currentFrame = 0;
-                    iniciarSalto();
                 }
+                if (e.key.toLowerCase() === 'a' || e.key.toLowerCase() === 'd') {
+                    player.isMoving = true;
+                    player.isMovingLeft = (e.key.toLowerCase() === 'a');
+                }
+            }
+            if (e.key.toLowerCase() === 'h') {
+                mostrarHitboxes = !mostrarHitboxes;
             }
         });
 
-        function iniciarSalto() {
-            let jumpStart = player.y;
-            let jumpTime = 0;
-            const jumpDuration = 60;
-
-            function jump() {
-                if (!player.isJumping) return;
-
-                jumpTime++;
-                let progress = jumpTime / jumpDuration;
-                let height = Math.sin(progress * Math.PI) * player.jumpHeight * 
-                            (1 - Math.pow(progress - 0.5, 2) * 0.5);
-                let newY = jumpStart - height;
-                
-                let canMove = true;
-                platforms.forEach(platform => {
-                    if (checkCollision({
-                        x: player.x,
-                        y: newY,
-                        width: player.width,
-                        height: player.height
-                    }, platform)) {
-                        if (player.y + player.height <= platform.y && 
-                            newY + player.height > platform.y) {
-                            newY = platform.y - player.height;
-                            if (keys.w) {
-                                jumpTime = 0;
-                                jumpStart = newY;
-                            } else {
-                                player.isJumping = false;
-                                player.isOnGround = true;
-                            }
-                            canMove = false;
-                        }
-                    }
-                });
-
-                if (canMove) {
-                    player.y = newY;
-                }
-
-                if (keys.d) {
-                    let newX = player.x + player.diagonalSpeed;
-                    if (newX <= canvas.width - player.width) {
-                        player.x = newX;
-                    }
-                    player.isMovingLeft = false;
-                } 
-                if (keys.a) {
-                    let newX = player.x - player.diagonalSpeed;
-                    if (newX >= 0) {
-                        player.x = newX;
-                    }
-                    player.isMovingLeft = true;
-                }
-
-                if (jumpTime >= jumpDuration) {
-                    if (keys.w) {
-                        jumpTime = 0;
-                        jumpStart = player.y;
-                    } else {
-                        player.isJumping = false;
-                        player.isOnGround = true;
-                        return;
-                    }
-                }
-
-                requestAnimationFrame(jump);
-            }
-            jump();
-        }
-
         document.addEventListener('keyup', (e) => {
-            if (e.key === 'd' || e.key === 'a' || e.key === 'ShiftLeft' || e.key === 'w') {
-                keys[e.key] = false;
-                if ((e.key === 'd' || e.key === 'a') && !keys.d && !keys.a) {
-                    player.isMoving = false;
-                    currentFrame = 0;
-                }
+            if (e.key.toLowerCase() in keys) {
+                keys[e.key.toLowerCase()] = false;
+                // No necesitamos resetear player.isAttacking aquí
+                // ya que se manejará automáticamente cuando termine la animación
             }
         });
 
@@ -453,6 +495,80 @@
         }
 
         startGame();
+
+        let enSuelo = true;
+        const MARGEN_TOLERANCIA = 0.1;
+
+        function estaEnSuelo() {
+            // Usar el estado actual si la posición es exactamente igual al suelo
+            if (Math.abs(player.y - canvas.height - 20) < MARGEN_TOLERANCIA) {
+                enSuelo = true;
+                player.y = canvas.height - 20 - player.height; // Forzar posición exacta
+                return true;
+            }
+            
+            // Actualizar el estado solo si realmente hay un cambio significativo
+            enSuelo = player.y >= canvas.height - 20 - MARGEN_TOLERANCIA;
+            
+            // Debug
+            if (enSuelo !== ultimoEstadoSuelo && 
+                Date.now() - tiempoUltimoCambio > TIEMPO_MINIMO_CAMBIO) {
+                ultimoEstadoSuelo = enSuelo;
+                tiempoUltimoCambio = Date.now();
+            }
+            
+            return enSuelo;
+        }
+
+        function actualizarFisica() {
+            const ahora = Date.now();
+            
+            // Aplicar gravedad
+            if (!enSuelo) {
+                velocidadY += gravedad;
+            }
+            
+            // Actualizar posición
+            posicionY += velocidadY;
+            
+            // Detectar colisión con el suelo con debounce
+            if (posicionY >= alturasuelo) {
+                posicionY = alturasuelo;
+                velocidadY = 0;
+                if (!enSuelo && (ahora - ultimoCambioSuelo) > tiempoDebounce) {
+                    enSuelo = true;
+                    ultimoCambioSuelo = ahora;
+                }
+            } else if (enSuelo && (ahora - ultimoCambioSuelo) > tiempoDebounce) {
+                enSuelo = false;
+                ultimoCambioSuelo = ahora;
+            }
+        }
+
+        function saltar() {
+            if (estaEnSuelo()) {
+                console.log(`Iniciando salto desde Y: ${player.y}`);
+                player.velocityY = -15;
+                console.log(`Velocidad inicial de salto: ${player.velocityY}`);
+            } else {
+                console.log(`Intento de salto fallido - No está en suelo`);
+            }
+        }
+
+        function dibujarHitboxes() {
+            if (!mostrarHitboxes) return;
+            
+            // Hitbox del jugador
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(player.x, player.y, player.width, player.height);
+
+            // Hitboxes de las plataformas
+            ctx.strokeStyle = 'blue';
+            platforms.forEach(platform => {
+                ctx.strokeRect(platform.x, platform.y, platform.width, platform.height);
+            });
+        }
     </script>
 </body>
 </html>
