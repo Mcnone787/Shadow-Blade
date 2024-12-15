@@ -273,11 +273,13 @@ upicon.addEventListener("click", up);
 downicon.addEventListener("click", down);
 
 function up(){
-    audio.volume = Math.min(1, audio.volume + 0.2);
+    const newVolume = audio.volume + 0.2;
+    audio.volume = Math.min(1, newVolume);
 }
 
 function down(){
-    audio.volume = Math.max(0, audio.volume - 0.2);
+    const newVolume = audio.volume - 0.2;
+    audio.volume = Math.max(0, newVolume);
 }
 
 const audioPrompt = document.createElement('div');
