@@ -37,7 +37,7 @@
             isMovingLeft: false,
             isAttacking: false,
             isJumping: false,
-            walkSpeed: 11,
+            walkSpeed: 1,
             jumpHeight: 300,
             diagonalSpeed: 8,
             velocityX: 0,
@@ -73,7 +73,7 @@
         let currentFrame = -1;
         let frameCount = 0;
         const staggerFrames = 10;
-        const ATTACK_STAGGER = 5;
+        const ATTACK_STAGGER = 10;
         let previousImage = null;
 
         const keys = {
@@ -84,7 +84,7 @@
             n: false
         };
 
-        const MOVEMENT_SPEED = 6;
+        const MOVEMENT_SPEED = 5; // Reducir este número para movimiento más lento
         const GRAVITY = 10;
         const JUMP_FORCE = -25;
         const MAX_FALL_SPEED = 20;
@@ -105,7 +105,419 @@
 
         let isAttackAnimationComplete = true; // Para controlar si la animación terminó
         let attackFrame = 0; // Para contar los frames del ataque
-        const ATTACK_FRAMES = 6; // Número total de frames en la animación de ataque
+        const ATTACK_FRAMES = 8; // Número total de frames en la animación de ataque
+
+        // Agregar variables globales
+        let score = 0;
+        let playerHealth = 100;
+        const MAX_PLAYER_HEALTH = 100;
+        let enemySpawnTimer = 0;
+        const ENEMY_SPAWN_INTERVAL = 5000; // Spawn cada 5 segundos
+
+        // Clase Enemigo
+        class Enemy {
+            constructor(x, y) {
+                // Propiedades básicas
+                this.x = x;
+                this.y = y;
+                this.width = 60;
+                this.height = 60;
+                
+                // Propiedades de salud y daño
+                this.health = this.randomHealth();
+                this.maxHealth = this.health;
+                
+                // Propiedades de movimiento aleatorias
+                this.velocityX = 2 + Math.random() * 2; // Velocidad entre 2 y 4
+                this.velocityY = 0;
+                this.isMovingLeft = true;
+                this.gravity = 0.8;
+                this.isOnGround = false;
+                this.jumpForce = this.randomJumpForce(); // Salto aleatorio
+
+                // Propiedades de apariencia aleatorias
+                this.shape = this.randomShape();
+                this.color = this.randomColor();
+                this.size = this.randomSize();
+
+                // Agregar variables
+                this.attackTimer = 0;
+                this.attackCooldown = 2000; // 2 segundos entre ataques
+                this.projectiles = [];
+            }
+
+            randomHealth() {
+                // Salud aleatoria entre 80 y 120
+                return Math.floor(80 + Math.random() * 40);
+            }
+
+            randomJumpForce() {
+                // Fuerza de salto aleatoria entre -12 y -18
+                return -(12 + Math.random() * 6);
+            }
+
+            randomShape() {
+                const shapes = ['circle', 'rectangle', 'triangle', 'diamond'];
+                return shapes[Math.floor(Math.random() * shapes.length)];
+            }
+
+            randomColor() {
+                const colors = [
+                    '#FF0000', // Rojo
+                    '#FF4500', // Naranja Rojizo
+                    '#8B0000', // Rojo Oscuro
+                    '#800080', // Púrpura
+                    '#4B0082', // Índigo
+                    '#DC143C', // Carmesí
+                    '#8B008B', // Magenta Oscuro
+                    '#9400D3'  // Violeta Oscuro
+                ];
+                return colors[Math.floor(Math.random() * colors.length)];
+            }
+
+            randomSize() {
+                // Tamaño base ± 20%
+                const variation = 0.4;
+                const baseSize = 60;
+                return {
+                    width: baseSize * (1 + (Math.random() * variation - variation/2)),
+                    height: baseSize * (1 + (Math.random() * variation - variation/2))
+                };
+            }
+
+            shoot() {
+                if (Date.now() - this.attackTimer > this.attackCooldown) {
+                    const dx = player.x - this.x;
+                    const dy = player.y - this.y;
+                    const angle = Math.atan2(dy, dx);
+                    
+                    this.projectiles.push({
+                        x: this.x,
+                        y: this.y,
+                        velocityX: Math.cos(angle) * 5,
+                        velocityY: Math.sin(angle) * 5,
+                        width: 10,
+                        height: 10
+                    });
+                    
+                    this.attackTimer = Date.now();
+                }
+            }
+
+            updateProjectiles() {
+                for (let i = this.projectiles.length - 1; i >= 0; i--) {
+                    const projectile = this.projectiles[i];
+                    
+                    // Mover proyectil
+                    projectile.x += projectile.velocityX;
+                    projectile.y += projectile.velocityY;
+                    
+                    // Verificar colisión con jugador
+                    if (projectile.x < player.x + player.width &&
+                        projectile.x + projectile.width > player.x &&
+                        projectile.y < player.y + player.height &&
+                        projectile.y + projectile.height > player.y) {
+                        
+                        playerHealth -= 10; // Daño del proyectil
+                        this.projectiles.splice(i, 1);
+                        continue;
+                    }
+                    
+                    // Eliminar proyectiles fuera de pantalla
+                    if (projectile.x < 0 || projectile.x > canvas.width ||
+                        projectile.y < 0 || projectile.y > canvas.height) {
+                        this.projectiles.splice(i, 1);
+                    }
+                }
+            }
+
+            update() {
+                const oldX = this.x;
+                const oldY = this.y;
+
+                // Calcular distancia al jugador
+                const distX = player.x - this.x;
+                const distY = player.y - this.y;
+
+                // Determinar dirección hacia el jugador
+                this.isMovingLeft = distX < 0;
+
+                // Movimiento horizontal hacia el jugador
+                if (this.isMovingLeft) {
+                    this.x -= this.velocityX;
+                } else {
+                    this.x += this.velocityX;
+                }
+
+                // Verificar colisión con otros enemigos
+                if (this.checkEnemyCollisions()) {
+                    this.x = oldX; // Revertir movimiento si hay colisión
+                }
+
+                // Verificar colisión con el jugador
+                if (this.checkPlayerCollision()) {
+                    this.x = oldX; // Revertir movimiento si hay colisión
+                }
+
+                // Saltar si el jugador está arriba
+                if (this.isOnGround && distY < -50) {
+                    this.velocityY = this.jumpForce;
+                    this.isOnGround = false;
+                }
+
+                // Aplicar gravedad
+                this.velocityY += this.gravity;
+                this.y += this.velocityY;
+
+                // Verificar colisiones después del movimiento vertical
+                if (this.checkEnemyCollisions() || this.checkPlayerCollision()) {
+                    this.y = oldY;
+                    this.velocityY = 0;
+                }
+
+                // Colisión con plataformas
+                this.isOnGround = false;
+                platforms.forEach(platform => {
+                    if (this.x + this.width > platform.x && 
+                        this.x < platform.x + platform.width &&
+                        this.y + this.height > platform.y &&
+                        this.y + this.height < platform.y + platform.height + 10) {
+                        
+                        if (this.velocityY > 0) {
+                            this.y = platform.y - this.height;
+                            this.velocityY = 0;
+                            this.isOnGround = true;
+                        }
+                    }
+                });
+
+                // Límites del canvas
+                if (this.x <= 0) {
+                    this.x = 0;
+                    this.isMovingLeft = false;
+                }
+                if (this.x + this.width >= canvas.width) {
+                    this.x = canvas.width - this.width;
+                    this.isMovingLeft = true;
+                }
+
+                // Límite del suelo
+                if (this.y + this.height > canvas.height - 20) {
+                    this.y = canvas.height - 20 - this.height;
+                    this.velocityY = 0;
+                    this.isOnGround = true;
+                }
+
+                this.shoot();
+                this.updateProjectiles();
+            }
+
+            checkEnemyCollisions() {
+                for (let enemy of enemies) {
+                    if (enemy === this) continue; // No verificar colisión consigo mismo
+
+                    if (this.x < enemy.x + enemy.width &&
+                        this.x + this.width > enemy.x &&
+                        this.y < enemy.y + enemy.height &&
+                        this.y + this.height > enemy.y) {
+                        return true; // Hay colisión
+                    }
+                }
+                return false;
+            }
+
+            checkPlayerCollision() {
+                return this.x < player.x + player.width &&
+                       this.x + this.width > player.x &&
+                       this.y < player.y + player.height &&
+                       this.y + this.height > player.y;
+            }
+
+            // Función auxiliar para mantener distancia mínima
+            keepDistance() {
+                const minDistance = 10; // Distancia mínima entre enemigos
+                enemies.forEach(enemy => {
+                    if (enemy === this) return;
+                    
+                    const dx = this.x - enemy.x;
+                    const dy = this.y - enemy.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < minDistance) {
+                        // Ajustar posición para mantener distancia
+                        const angle = Math.atan2(dy, dx);
+                        this.x = enemy.x + Math.cos(angle) * minDistance;
+                        this.y = enemy.y + Math.sin(angle) * minDistance;
+                    }
+                });
+            }
+
+            draw() {
+                ctx.fillStyle = this.color;
+                
+                switch(this.shape) {
+                    case 'circle':
+                        ctx.beginPath();
+                        ctx.arc(
+                            this.x + this.size.width/2,
+                            this.y + this.size.height/2,
+                            Math.min(this.size.width, this.size.height)/2,
+                            0,
+                            Math.PI * 2
+                        );
+                        ctx.fill();
+                        break;
+
+                    case 'triangle':
+                        ctx.beginPath();
+                        ctx.moveTo(this.x + this.size.width/2, this.y);
+                        ctx.lineTo(this.x + this.size.width, this.y + this.size.height);
+                        ctx.lineTo(this.x, this.y + this.size.height);
+                        ctx.closePath();
+                        ctx.fill();
+                        break;
+
+                    case 'diamond':
+                        ctx.beginPath();
+                        ctx.moveTo(this.x + this.size.width/2, this.y);
+                        ctx.lineTo(this.x + this.size.width, this.y + this.size.height/2);
+                        ctx.lineTo(this.x + this.size.width/2, this.y + this.size.height);
+                        ctx.lineTo(this.x, this.y + this.size.height/2);
+                        ctx.closePath();
+                        ctx.fill();
+                        break;
+
+                    case 'rectangle':
+                    default:
+                        ctx.fillRect(this.x, this.y, this.size.width, this.size.height);
+                        break;
+                }
+
+                // Dibujar barra de vida
+                const healthBarWidth = 50;
+                const healthBarHeight = 5;
+                const healthBarX = this.x + (this.size.width - healthBarWidth) / 2;
+                const healthBarY = this.y - 10;
+
+                // Fondo de la barra de vida
+                ctx.fillStyle = 'gray';
+                ctx.fillRect(healthBarX, healthBarY, healthBarWidth, healthBarHeight);
+
+                // Barra de vida actual
+                ctx.fillStyle = 'green';
+                const currentHealthWidth = (this.health / this.maxHealth) * healthBarWidth;
+                ctx.fillRect(healthBarX, healthBarY, currentHealthWidth, healthBarHeight);
+
+                // Dibujar proyectiles
+                ctx.fillStyle = 'yellow';
+                this.projectiles.forEach(projectile => {
+                    ctx.fillRect(projectile.x, projectile.y, projectile.width, projectile.height);
+                });
+            }
+
+            takeDamage(damage) {
+                this.health -= damage;
+                if (this.health < 0) this.health = 0;
+                
+                // Efecto visual de daño (opcional)
+                this.showDamageEffect();
+            }
+
+            showDamageEffect() {
+                // Efecto visual temporal al recibir daño
+                const originalColor = this.color;
+                this.color = '#FFFFFF'; // Flash blanco
+                setTimeout(() => {
+                    this.color = originalColor;
+                }, 100);
+            }
+        }
+
+        // Array para almacenar enemigos
+        let enemies = [];
+
+        // Función para crear enemigos
+        function createEnemies() {
+            enemies.length = 0;
+            
+            platforms.forEach((platform, index) => {
+                if (index > 0 && Math.random() > 0.5) {
+                    const enemyX = platform.x + Math.random() * (platform.width - 60);
+                    const enemyY = platform.y - 60;
+                    enemies.push(new Enemy(enemyX, enemyY));
+                }
+            });
+            
+            // Asegurar que haya al menos un enemigo
+            if (enemies.length === 0) {
+                const firstPlatform = platforms[1];
+                enemies.push(new Enemy(
+                    firstPlatform.x + firstPlatform.width/2, 
+                    firstPlatform.y - 60
+                ));
+            }
+        }
+
+        // Función para verificar colisiones entre el ataque del jugador y los enemigos
+        function checkAttackCollisions() {
+            if (player.isAttacking) {
+                // Solo aplicar daño cuando estemos en el frame específico del ataque
+                const attackFrame = 4; // Frame donde queremos que ocurra el daño
+                
+                if (currentFrame === attackFrame) { // Solo hacer daño en este frame específico
+                    const attackRange = 30;
+                    const attackHeight = player.height;
+                    const attackDamage = 20;
+                    
+                    const attackX = player.isMovingLeft ? 
+                        player.x - attackRange : 
+                        player.x + player.width;
+
+                    // Dibujar hitbox solo en el frame de ataque
+                    if (mostrarHitboxes) {
+                        ctx.strokeStyle = 'yellow';
+                        ctx.lineWidth = 2;
+                        ctx.strokeRect(
+                            attackX,
+                            player.y,
+                            attackRange,
+                            attackHeight
+                        );
+                    }
+
+                    // Aplicar daño solo en el frame específico
+                    enemies = enemies.filter(enemy => {
+                        const enemyInRange = player.isMovingLeft ?
+                            (enemy.x + enemy.width > attackX && 
+                             enemy.x < attackX + attackRange &&
+                             enemy.y < player.y + attackHeight &&
+                             enemy.y + enemy.height > player.y) :
+                            (enemy.x < attackX + attackRange &&
+                             enemy.x + enemy.width > attackX &&
+                             enemy.y < player.y + attackHeight &&
+                             enemy.y + enemy.height > player.y);
+
+                        if (enemyInRange) {
+                            enemy.takeDamage(attackDamage);
+                            if (enemy.health <= 0) {
+                                score += 100; // Puntos por matar enemigo
+                                return false;
+                            }
+                            showDamageNumber(attackDamage, enemy.x + enemy.width/2, enemy.y);
+                            return enemy.health > 0;
+                        }
+                        return true;
+                    });
+                }
+            }
+        }
+
+        // Función para mostrar números de daño (opcional)
+        function showDamageNumber(damage, x, y) {
+            ctx.fillStyle = 'white';
+            ctx.font = '20px Arial';
+            ctx.fillText(`-${damage}`, x, y - 20);
+        }
 
         function loadImage(src) {
             return new Promise((resolve, reject) => {
@@ -233,40 +645,38 @@
                 height: 20
             });
 
-            // Crear plataformas en patrón ascendente
-            let currentHeight = canvas.height - 150; // Altura inicial
-            let alternateLeft = true; // Para alternar entre izquierda y derecha
-            
-            for (let i = 0; i < 6; i++) { // 6 niveles de plataformas
-                let platformWidth = 200; // Ancho fijo para las plataformas
-                let x;
+            // Configuración de plataformas
+            const platformWidth = 200;  // Ancho de cada plataforma
+            const minGap = 100;        // Espacio mínimo entre plataformas
+            const rowHeight = 150;      // Altura entre filas
+            const numRows = 4;         // Número de filas de plataformas
+            const platformsPerRow = 3;  // Plataformas por fila
+
+            // Generar plataformas por filas
+            for (let row = 0; row < numRows; row++) {
+                const y = canvas.height - 150 - (row * rowHeight); // Comenzar desde abajo
                 
-                if (alternateLeft) {
-                    x = canvas.width * 0.2; // 20% desde la izquierda
-                } else {
-                    x = canvas.width * 0.6; // 60% desde la izquierda
+                // Calcular espaciado horizontal
+                const availableWidth = canvas.width - (platformWidth * platformsPerRow);
+                const gap = availableWidth / (platformsPerRow + 1);
+                
+                // Crear plataformas en esta fila
+                for (let i = 0; i < platformsPerRow; i++) {
+                    // Añadir algo de variación aleatoria a la posición X
+                    const baseX = gap + (i * (platformWidth + gap));
+                    const randomOffset = Math.random() * 50 - 25; // ±25 píxeles de variación
+                    
+                    // Añadir algo de variación a la altura
+                    const heightVariation = Math.random() * 30 - 15; // ±15 píxeles de variación
+                    
+                    platforms.push({
+                        x: baseX + randomOffset,
+                        y: y + heightVariation,
+                        width: platformWidth,
+                        height: 20
+                    });
                 }
-
-                platforms.push({
-                    x: x,
-                    y: currentHeight,
-                    width: platformWidth,
-                    height: 20
-                });
-
-                // Ajustar para la siguiente plataforma
-                currentHeight -= 150; // Distancia vertical entre plataformas
-                alternateLeft = !alternateLeft; // Alternar lado
             }
-
-
-            // Plataforma superior final
-            platforms.push({
-                x: canvas.width * 0.4,
-                y: 100,
-                width: 200,
-                height: 20
-            });
         }
 
         function checkCollisions() {
@@ -274,8 +684,10 @@
             let currentPlatformY = canvas.height;
             const COLLISION_MARGIN = 2;
 
-            // Guardamos la posición anterior para debug
-            console.log(`Pre-colisión - Y: ${player.y}, VelocityY: ${player.velocityY}`);
+            // Solo mostrar logs cuando hay cambios significativos
+            let ultimoEstadoSuelo = false;
+            let tiempoUltimoCambio = 0;
+            const TIEMPO_MINIMO_CAMBIO = 100; // milisegundos
 
             platforms.forEach(platform => {
                 const wasAbove = player.y + player.height <= platform.y + COLLISION_MARGIN;
@@ -293,7 +705,6 @@
                         player.y = platform.y - player.height;
                         player.velocityY = 0;
                         player.isJumping = false;
-                        console.log('Colisión detectada con plataforma');
                     }
                 }
             });
@@ -305,11 +716,15 @@
                 player.isOnGround = true;
                 player.velocityY = 0;
                 player.isJumping = false;
-                console.log('Colisión con suelo');
             }
 
-            // Debug post-colisión
-            console.log(`Post-colisión - Y: ${player.y}, VelocityY: ${player.velocityY}, isJumping: ${player.isJumping}`);
+            // Solo mostrar logs cuando hay cambios significativos
+            if (player.isOnGround !== ultimoEstadoSuelo && 
+                Date.now() - tiempoUltimoCambio > TIEMPO_MINIMO_CAMBIO) {
+                console.log(`Estado del suelo cambió a: ${player.isOnGround}`);
+                ultimoEstadoSuelo = player.isOnGround;
+                tiempoUltimoCambio = Date.now();
+            }
         }
 
         function updatePlayerPosition() {
@@ -383,77 +798,102 @@
             }
         }
 
+        // Función para mostrar el área de ataque (opcional, para debug)
+        function drawAttackArea() {
+            if (player.isAttacking && mostrarHitboxes) {
+                const attackRange = 80;
+                ctx.strokeStyle = 'yellow';
+                ctx.lineWidth = 2;
+                ctx.strokeRect(
+                    player.isMovingLeft ? player.x - attackRange : player.x + player.width,
+                    player.y,
+                    attackRange,
+                    player.height
+                );
+            }
+        }
+
+        // Función para generar nuevos enemigos
+        function spawnEnemy() {
+            const x = Math.random() * (canvas.width - 60);
+            const y = 0; // Spawned from top
+            enemies.push(new Enemy(x, y));
+        }
+
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            updatePlayerPosition();
             
             // Dibujar plataformas
             platforms.forEach(platform => {
                 ctx.fillStyle = 'green';
                 ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+                
+                // Hitbox de plataformas
+                if (mostrarHitboxes) {
+                    ctx.strokeStyle = 'white';
+                    ctx.strokeRect(platform.x, platform.y, platform.width, platform.height);
+                }
+            });
+            
+            updatePlayerPosition();
+            
+            // Dibujar y actualizar enemigos
+            enemies.forEach(enemy => {
+                enemy.update();
+                enemy.draw();
+                
+                // Hitbox de enemigos
+                if (mostrarHitboxes) {
+                    ctx.strokeStyle = 'blue';
+                    ctx.lineWidth = 2;
+                    ctx.strokeRect(enemy.x, enemy.y, enemy.width, enemy.height);
+                }
             });
 
-            frameCount++;
-            if (frameCount % (player.isAttacking ? ATTACK_STAGGER : staggerFrames) === 0) {
+            // PRIMERO: Dibujar el sprite del jugador
+            drawPlayer();
+
+            // DESPUÉS: Dibujar las hitboxes
+            if (mostrarHitboxes) {
+                // Hitbox del jugador
+                ctx.strokeStyle = 'red';
+                ctx.lineWidth = 2;
+                ctx.strokeRect(player.x, player.y, player.width, player.height);
+
+                // Hitbox del ataque
                 if (player.isAttacking) {
-                    currentFrame = (currentFrame + 1) % loadedImages.attack.right.length;
-                    attackFrame++;
-                    
-                    // Verificar si la animación de ataque ha terminado
-                    if (attackFrame >= ATTACK_FRAMES) {
-                        player.isAttacking = false;
-                        isAttackAnimationComplete = true;
-                        attackFrame = 0;
-                        currentFrame = 0;
-                    }
-                } else if (player.isJumping) {
-                    currentFrame = (currentFrame + 1) % loadedImages.jump.right.length;
-                } else if (player.isMoving) {
-                    currentFrame = (currentFrame + 1) % loadedImages.walk.right.length;
-                } else {
-                    currentFrame = (currentFrame + 1) % loadedImages.quiet.right.length;
+                    const attackRange = 80;
+                    ctx.strokeStyle = 'yellow';
+                    ctx.lineWidth = 2;
+                    ctx.strokeRect(
+                        player.isMovingLeft ? player.x - attackRange : player.x + player.width,
+                        player.y,
+                        attackRange,
+                        player.height
+                    );
                 }
             }
 
-            let currentImage;
-            if (player.isAttacking) {
-                currentImage = player.isMovingLeft ? 
-                    loadedImages.attack.left[currentFrame] : 
-                    loadedImages.attack.right[currentFrame];
-            } else if (player.isJumping) {
-                currentImage = player.isMovingLeft ? 
-                    loadedImages.jump.left[currentFrame] : 
-                    loadedImages.jump.right[currentFrame];
-            } else if (!player.isMovingLeft) {
-                currentImage = player.isMoving ? 
-                    loadedImages.walk.right[currentFrame] : 
-                    loadedImages.quiet.right[currentFrame];
-            } else {
-                currentImage = player.isMoving ? 
-                    loadedImages.walk.left[currentFrame] : 
-                    loadedImages.quiet.left[currentFrame];
-            }
+            checkAttackCollisions();
 
-            if (currentImage) {
-                previousImage = currentImage;
-                ctx.drawImage(
-                    currentImage,
-                    player.x,
-                    player.y,
-                    player.width,
-                    player.height
-                );
-            } else if (previousImage) {
-                ctx.drawImage(
-                    previousImage,
-                    player.x,
-                    player.y,
-                    player.width,
-                    player.height
-                );
+            // Spawn de enemigos
+            if (Date.now() - enemySpawnTimer > ENEMY_SPAWN_INTERVAL) {
+                spawnEnemy();
+                enemySpawnTimer = Date.now();
             }
-
+            
+            // Dibujar HUD
+            drawHUD();
+            
+            // Game Over check
+            if (playerHealth <= 0) {
+                // Implementar lógica de Game Over
+                ctx.fillStyle = 'red';
+                ctx.font = '48px Arial';
+                ctx.fillText('GAME OVER', canvas.width/2 - 100, canvas.height/2);
+                return; // Detener el juego
+            }
+            
             requestAnimationFrame(animate);
         }
 
@@ -488,6 +928,7 @@
             try {
                 await loadAllImages();
                 generatePlatforms();
+                createEnemies(); // Crear enemigos después de las plataformas
                 animate();
             } catch (error) {
                 console.error('Error cargando imágenes:', error);
@@ -568,6 +1009,64 @@
             platforms.forEach(platform => {
                 ctx.strokeRect(platform.x, platform.y, platform.width, platform.height);
             });
+        }
+
+        function drawPlayer() {
+            let currentAnimation;
+            let direction;
+
+            if (player.isAttacking) {
+                currentAnimation = loadedImages.attack;
+                direction = player.isMovingLeft ? 'left' : 'right';
+            } else if (!player.isOnGround) {
+                currentAnimation = loadedImages.jump;
+                direction = player.isMovingLeft ? 'left' : 'right';
+            } else if (player.isMoving) {
+                currentAnimation = loadedImages.walk;
+                direction = player.isMovingLeft ? 'left' : 'right';
+            } else {
+                currentAnimation = loadedImages.quiet;
+                direction = player.isMovingLeft ? 'left' : 'right';
+            }
+
+            frameCount++;
+            if (frameCount >= staggerFrames) {
+                frameCount = 0;
+                currentFrame++;
+                if (currentFrame >= currentAnimation[direction].length) {
+                    currentFrame = 0;
+                    if (player.isAttacking) {
+                        player.isAttacking = false;
+                        isAttackAnimationComplete = true;
+                    }
+                }
+            }
+
+            const currentSprite = currentAnimation[direction][currentFrame];
+            if (currentSprite) {
+                ctx.drawImage(currentSprite, player.x, player.y, player.width, player.height);
+            }
+        }
+
+        // Agregar HUD para mostrar puntuación y vida
+        function drawHUD() {
+            // Puntuación
+            ctx.fillStyle = 'white';
+            ctx.font = '20px Arial';
+            ctx.fillText(`Score: ${score}`, 10, 30);
+
+            // Barra de vida del jugador
+            const healthBarWidth = 200;
+            const healthBarHeight = 20;
+            
+            // Fondo de la barra de vida
+            ctx.fillStyle = 'red';
+            ctx.fillRect(10, 50, healthBarWidth, healthBarHeight);
+            
+            // Vida actual
+            ctx.fillStyle = 'green';
+            const currentHealthWidth = (playerHealth / MAX_PLAYER_HEALTH) * healthBarWidth;
+            ctx.fillRect(10, 50, currentHealthWidth, healthBarHeight);
         }
     </script>
 </body>
