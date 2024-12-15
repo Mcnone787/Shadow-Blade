@@ -43,11 +43,12 @@
             maxVelocityX: 8,
             velocityY: 0,
             gravity: 0.8,
-            maxFallSpeed: 15
+            maxFallSpeed: 15,
+            isOnGround: true
         };
 
         const platforms = [];
-        const platformCount = 5; // Número de plataformas
+        const platformCount = 200; // Número de plataformas
 
         const loadedImages = {
             quiet: {
@@ -237,17 +238,17 @@
                         width: player.width,
                         height: player.height
                     }, platform)) {
-                        // Solo detectar colisión si el jugador está por encima de la plataforma
                         if (player.y + player.height <= platform.y + 10) {
                             isOnPlatform = true;
                             player.y = platform.y - player.height;
-                            player.velocityY = 0; // Resetear velocidad vertical al aterrizar
+                            player.velocityY = 0;
+                            player.isOnGround = true;
                         }
                     }
                 });
 
                 if (!isOnPlatform) {
-                    // Aumentar gradualmente la velocidad de caída
+                    player.isOnGround = false;
                     player.velocityY = Math.min(player.velocityY + player.gravity, player.maxFallSpeed);
                     player.y += player.velocityY;
                 }
@@ -348,8 +349,9 @@
                 if (!player.isMovingLeft) currentFrame = -1;
                 player.isMoving = true;
                 player.isMovingLeft = true;
-            } else if (e.key === 'w' && !player.isJumping) {
+            } else if (e.key === 'w' && player.isOnGround && !player.isJumping) {
                 player.isJumping = true;
+                player.isOnGround = false;
                 currentFrame = -1;
                 let jumpStart = player.y;
                 let jumpTime = 0;
