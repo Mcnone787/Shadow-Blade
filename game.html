@@ -72,8 +72,8 @@
 
         let currentFrame = -1;
         let frameCount = 0;
-        const staggerFrames = 10;
-        const ATTACK_STAGGER = 10;
+        const staggerFrames = 5;
+        const ATTACK_STAGGER = 60;
         let previousImage = null;
 
         const keys = {
@@ -106,7 +106,7 @@
         // Variables para controlar el ataque
         let isAttackAnimationComplete = true; // Para controlar si la animación terminó
         let attackFrame = 0; // Para contar los frames del ataque
-        const ATTACK_FRAMES = 8; // Número total de frames en la animación de ataque
+        const ATTACK_FRAMES = 6; // Número total de frames en la animación de ataque
 
         // Agregar variables globales
         let score = 0;
@@ -164,7 +164,7 @@
 
                 // Agregar variables
                 this.attackTimer = 0;
-                this.attackCooldown = 2000; // 2 segundos entre ataques
+                this.attackCooldown = 1000; // 1 segundo entre ataques
                 this.projectiles = [];
             }
 
