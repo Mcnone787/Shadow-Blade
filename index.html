@@ -103,6 +103,7 @@
 
         let mostrarHitboxes = false;
 
+        // Variables para controlar el ataque
         let isAttackAnimationComplete = true; // Para controlar si la animación terminó
         let attackFrame = 0; // Para contar los frames del ataque
         const ATTACK_FRAMES = 8; // Número total de frames en la animación de ataque
@@ -113,6 +114,27 @@
         const MAX_PLAYER_HEALTH = 100;
         let enemySpawnTimer = Date.now(); // Inicializar el timer
         const ENEMY_SPAWN_INTERVAL = 5000; // Spawn cada 5 segundos
+
+        // Agregar variable global para el modo invencible
+        let isInvincible = false;
+
+        // Agregar variable global para el modo sin enemigos
+        let noEnemies = false;
+
+        // Modificar el event listener para incluir la tecla I
+        document.addEventListener('keydown', (e) => {
+            if (e.key.toLowerCase() === 'p') {
+                isInvincible = !isInvincible;
+                console.log(`Modo invencible: ${isInvincible ? 'ACTIVADO' : 'DESACTIVADO'}`);
+            }
+            if (e.key.toLowerCase() === 'i') {
+                noEnemies = !noEnemies;
+                if (noEnemies) {
+                    enemies = []; // Eliminar todos los enemigos existentes
+                }
+                console.log(`Modo sin enemigos: ${noEnemies ? 'ACTIVADO' : 'DESACTIVADO'}`);
+            }
+        });
 
         // Clase Enemigo
         class Enemy {
@@ -217,7 +239,9 @@
                         projectile.y < player.y + player.height &&
                         projectile.y + projectile.height > player.y) {
                         
-                        playerHealth = Math.max(0, playerHealth - 10); // Asegurar que no baje de 0
+                        if (!isInvincible) { // Solo hacer daño si no es invencible
+                            playerHealth = Math.max(0, playerHealth - 10);
+                        }
                         this.projectiles.splice(i, 1);
                         continue;
                     }
@@ -905,8 +929,9 @@
                         return;
                     }
                 }
-                // Spawn de enemigos
-                if (Date.now() - enemySpawnTimer > ENEMY_SPAWN_INTERVAL) {
+
+                // Solo generar enemigos si noEnemies es false
+                if (!noEnemies && Date.now() - enemySpawnTimer > ENEMY_SPAWN_INTERVAL) {
                     spawnEnemy();
                     enemySpawnTimer = Date.now();
                 }
@@ -1146,39 +1171,57 @@
         }
 
         function drawPlayer() {
+            if (!loadedImages.quiet.right.length) return;
+
             let currentAnimation;
-            let direction;
+            let direction = player.isMovingLeft ? 'left' : 'right';
 
             if (player.isAttacking) {
-                currentAnimation = loadedImages.attack;
-                direction = player.isMovingLeft ? 'left' : 'right';
-            } else if (!player.isOnGround) {
-                currentAnimation = loadedImages.jump;
-                direction = player.isMovingLeft ? 'left' : 'right';
-            } else if (player.isMoving) {
-                currentAnimation = loadedImages.walk;
-                direction = player.isMovingLeft ? 'left' : 'right';
-            } else {
-                currentAnimation = loadedImages.quiet;
-                direction = player.isMovingLeft ? 'left' : 'right';
-            }
-
-            frameCount++;
-            if (frameCount >= staggerFrames) {
-                frameCount = 0;
-                currentFrame++;
-                if (currentFrame >= currentAnimation[direction].length) {
-                    currentFrame = 0;
-                    if (player.isAttacking) {
+                currentAnimation = loadedImages.attack[direction];
+                frameCount++;
+                
+                if (frameCount >= staggerFrames) {
+                    frameCount = 0;
+                    attackFrame++;
+                    currentFrame = (currentFrame + 1) % currentAnimation.length;
+                    
+                    // Terminar la animación de ataque después de completar los frames
+                    if (attackFrame >= ATTACK_FRAMES) {
                         player.isAttacking = false;
                         isAttackAnimationComplete = true;
+                        attackFrame = 0;
+                        currentFrame = 0;
                     }
+                }
+            } else {
+                // Animaciones normales
+                if (!player.isOnGround) {
+                    currentAnimation = loadedImages.jump[direction];
+                } else if (player.isMoving) {
+                    currentAnimation = loadedImages.walk[direction];
+                } else {
+                    currentAnimation = loadedImages.quiet[direction];
+                }
+                
+                frameCount++;
+                if (frameCount >= staggerFrames) {
+                    frameCount = 0;
+                    currentFrame = (currentFrame + 1) % currentAnimation.length;
                 }
             }
 
-            const currentSprite = currentAnimation[direction][currentFrame];
-            if (currentSprite) {
-                ctx.drawImage(currentSprite, player.x, player.y, player.width, player.height);
+            // Dibujar el sprite actual
+            if (currentAnimation && currentAnimation.length > 0) {
+                const currentSprite = currentAnimation[currentFrame];
+                if (currentSprite) {
+                    ctx.drawImage(
+                        currentSprite,
+                        player.x,
+                        player.y,
+                        player.width,
+                        player.height
+                    );
+                }
             }
         }
 
@@ -1219,6 +1262,27 @@
             
             // Texto de HP en verde claro
             drawTextWithOutline(`HP: ${playerHealth}/${MAX_PLAYER_HEALTH}`, 220, 67, '#90EE90');
+
+            // Indicadores de modos especiales
+            let y = 60;
+            if (isInvincible) {
+                ctx.font = 'bold 24px Arial';
+                ctx.strokeStyle = 'black';
+                ctx.lineWidth = 3;
+                ctx.strokeText('INVENCIBLE', 10, y);
+                ctx.fillStyle = '#FFD700'; // Dorado
+                ctx.fillText('INVENCIBLE', 10, y);
+                y += 30;
+            }
+            
+            if (noEnemies) {
+                ctx.font = 'bold 24px Arial';
+                ctx.strokeStyle = 'black';
+                ctx.lineWidth = 3;
+                ctx.strokeText('SIN ENEMIGOS', 10, y);
+                ctx.fillStyle = '#FF4500'; // Naranja rojizo
+                ctx.fillText('SIN ENEMIGOS', 10, y);
+            }
         }
 
         // Función Game Over actualizada
