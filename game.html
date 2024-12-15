@@ -65,7 +65,7 @@
                 right: []
             },
             attack: {
-                left: [],   
+                left: [],
                 right: []
             }
         };
@@ -918,49 +918,57 @@
             // window.location.reload();
         }
 
-        // Agregar estas variables al inicio
-        let lastTime = 0;
-        const FPS = 60;
-        const frameTime = 1000 / FPS;
-
-        // Modificar el game loop principal
-        function gameLoop(currentTime) {
-            if (!lastTime) lastTime = currentTime;
+        // Función animate modificada
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
             
-            const deltaTime = (currentTime - lastTime) / frameTime; // Normalizar a 60 FPS
-            lastTime = currentTime;
+            if (!isPaused) {
+                if (playerHealth <= 0) {
+                    if (showGameOver()) {
+                        requestAnimationFrame(animate);
+                        return;
+                    }
+                }
 
-            // Actualizar posiciones usando deltaTime
-            if (player.isMoving) {
-                player.x += player.velocityX * deltaTime;
-                player.y += player.velocityY * deltaTime;
+                // Solo generar enemigos si noEnemies es false
+                if (!noEnemies && Date.now() - enemySpawnTimer > ENEMY_SPAWN_INTERVAL) {
+                    spawnEnemy();
+                    enemySpawnTimer = Date.now();
+                }
+
+                // Actualizar posiciones
+                updatePlayerPosition();
+                enemies.forEach(enemy => enemy.update());
+                
+                // Dibujar elementos del juego
+                platforms.forEach(platform => {
+                    ctx.fillStyle = 'green';
+                    ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+                });
+                
+                drawPlayer();
+                enemies.forEach(enemy => enemy.draw());
+                drawHUD();
+                
+                if (mostrarHitboxes) {
+                    dibujarHitboxes();
+                }
+                
+                checkAttackCollisions();
+            } else {
+                // Dibujar el juego en pausa
+                platforms.forEach(platform => {
+                    ctx.fillStyle = 'green';
+                    ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+                });
+                drawPlayer();
+                enemies.forEach(enemy => enemy.draw());
+                drawHUD();
+                drawPauseMenu();
             }
-
-            // Actualizar gravedad
-            if (!player.isOnGround) {
-                player.velocityY += player.gravity * deltaTime;
-            }
-
-            // Actualizar enemigos
-            enemies.forEach(enemy => {
-                enemy.x += enemy.velocityX * deltaTime;
-                enemy.y += enemy.velocityY * deltaTime;
-                enemy.velocityY += enemy.gravity * deltaTime;
-            });
-
-            // Actualizar proyectiles
-            projectiles.forEach(projectile => {
-                projectile.x += projectile.velocityX * deltaTime;
-                projectile.y += projectile.velocityY * deltaTime;
-            });
-
-            // Resto del código de actualización...
             
-            requestAnimationFrame(gameLoop);
+            requestAnimationFrame(animate);
         }
-
-        // Iniciar el game loop
-        requestAnimationFrame(gameLoop);
 
         // Event listener para clicks del ratón
         canvas.addEventListener('click', (e) => {
