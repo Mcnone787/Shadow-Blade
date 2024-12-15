@@ -5,38 +5,77 @@
     <title>Juego de Plataformas</title>
     <style>
         canvas {
-            border: 1px solid #000;
             background: #f0f0f0;
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
         }
     </style>
 </head>
 <body>
-    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <canvas id="gameCanvas"></canvas>
 
     <script>
         const canvas = document.getElementById('gameCanvas');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
         const ctx = canvas.getContext('2d');
+        ctx.imageSmoothingEnabled = false;
 
         const player = {
             x: 0,
-            y: canvas.height-80,
+            y: canvas.height - 100,
             width: 80,
             height: 80,
             isMoving: false,
-            speed: 5
+            isMovingLeft: false,
+            isJumping: false,
+            walkSpeed: 6,
+            jumpHeight: 300,
+            diagonalSpeed: 8,
+            velocityX: 0,
+            maxVelocityX: 8,
+            velocityY: 0,
+            gravity: 0.8,
+            maxFallSpeed: 15
         };
 
-        // Arrays para almacenar las imágenes cargadas
+        const platforms = [];
+        const platformCount = 5; // Número de plataformas
+
         const loadedImages = {
-            quiet: [],
-            walk: []
+            quiet: {
+                left: [],
+                right: []
+            },
+            walk: {
+                left: [],
+                right: []
+            },
+            jump: {
+                left: [],
+                right: []
+            }
         };
 
-        let currentFrame = 0;
+        let currentFrame = -1;
         let frameCount = 0;
-        const staggerFrames = 8;
+        const staggerFrames = 5;
+        let previousImage = null;
 
-        // Función para cargar una imagen
+        const keys = {
+            d: false,
+            a: false,
+            w: false,
+            ShiftLeft: false
+        };
+
         function loadImage(src) {
             return new Promise((resolve, reject) => {
                 const img = new Image();
@@ -46,56 +85,246 @@
             });
         }
 
-        // Cargar todas las imágenes
         async function loadAllImages() {
-            const quietPaths = [
+            const quietPathsRight = [
                 'spirtessepardes/spritequieto/quieto1.png',
                 'spirtessepardes/spritequieto/quieto2.png',
                 'spirtessepardes/spritequieto/quieto3.png',
                 'spirtessepardes/spritequieto/quieto4.png'
             ];
-
-            const walkPaths = [
+            const quietPathsLeft = [
+                'spirtessepardes/spritequieto/quietoIzquierdaa1.png',
+                'spirtessepardes/spritequieto/quietoIzquierdaa2.png',
+                'spirtessepardes/spritequieto/quietoIzquierdaa3.png',
+                'spirtessepardes/spritequieto/quietoIzquierdaa4.png'
+            ];
+            const walkPathsRight = [
                 'spirtessepardes/spriteCaminar/caminar1.png',
                 'spirtessepardes/spriteCaminar/caminar2.png',
                 'spirtessepardes/spriteCaminar/caminar3.png',
                 'spirtessepardes/spriteCaminar/caminar4.png',
                 'spirtessepardes/spriteCaminar/caminar5.png',
-                'spirtessepardes/spriteCaminar/caminar6.png'
+                'spirtessepardes/spriteCaminar/caminar6.png',
+               
+            ];
+            const walkPathsLeft = [
+                'spirtessepardes/spriteCaminar/caminarIzquierda1.png',
+                'spirtessepardes/spriteCaminar/caminarIzquierda2.png',
+                'spirtessepardes/spriteCaminar/caminarIzquierda3.png',
+                'spirtessepardes/spriteCaminar/caminarIzquierda4.png',
+                'spirtessepardes/spriteCaminar/caminarIzquierda5.png',
+                'spirtessepardes/spriteCaminar/caminarIzquierda6.png',
             ];
 
-            // Cargar imágenes quieto
-            for (const path of quietPaths) {
+            const jumpPathsRight = [
+                'spirtessepardes/spriteSalto/saltoderecha1.png',
+                'spirtessepardes/spriteSalto/saltoderecha2.png',
+                'spirtessepardes/spriteSalto/saltoderecha3.png',
+                'spirtessepardes/spriteSalto/saltoderecha4.png',
+                'spirtessepardes/spriteSalto/saltoderecha5.png',
+                'spirtessepardes/spriteSalto/saltoderecha6.png',
+                'spirtessepardes/spriteSalto/saltoderecha7.png',
+                'spirtessepardes/spriteSalto/saltoderecha8.png',
+
+            ];  
+            const jumpPathsLeft = [
+                'spirtessepardes/spriteSalto/saltoizquierda1.png',
+                'spirtessepardes/spriteSalto/saltoizquierda2.png',
+                'spirtessepardes/spriteSalto/saltoizquierda3.png',
+                'spirtessepardes/spriteSalto/saltoizquierda4.png',
+                'spirtessepardes/spriteSalto/saltoizquierda5.png',
+                'spirtessepardes/spriteSalto/saltoizquierda6.png',
+                'spirtessepardes/spriteSalto/saltoizquierda7.png',
+                'spirtessepardes/spriteSalto/saltoizquierda8.png',
+            ];
+            for (const path of jumpPathsRight) {
                 const img = await loadImage(path);
-                loadedImages.quiet.push(img);
+                loadedImages.jump.right.push(img);
+            }
+            for (const path of jumpPathsLeft) {
+                const img = await loadImage(path);
+                loadedImages.jump.left.push(img);
+            }
+            for (const path of quietPathsRight) {
+                const img = await loadImage(path);
+                loadedImages.quiet.right.push(img);
+            }
+            for (const path of quietPathsLeft) {
+                const img = await loadImage(path);
+                loadedImages.quiet.left.push(img);
             }
 
-            // Cargar imágenes caminar
-            for (const path of walkPaths) {
+            for (const path of walkPathsRight) {
                 const img = await loadImage(path);
-                loadedImages.walk.push(img);
+                loadedImages.walk.right.push(img);
             }
+            for (const path of walkPathsLeft) {
+                const img = await loadImage(path);
+                loadedImages.walk.left.push(img);
+            }
+        }
+
+        function generatePlatforms() {
+            // Limpiar plataformas existentes
+            platforms.length = 0;
+
+            // Plataforma base (suelo)
+            platforms.push({
+                x: 0,
+                y: canvas.height - 20,
+                width: canvas.width,
+                height: 20
+            });
+
+            // Crear plataformas en patrón ascendente
+            let currentHeight = canvas.height - 150; // Altura inicial
+            let alternateLeft = true; // Para alternar entre izquierda y derecha
+            
+            for (let i = 0; i < 6; i++) { // 6 niveles de plataformas
+                let platformWidth = 200; // Ancho fijo para las plataformas
+                let x;
+                
+                if (alternateLeft) {
+                    x = canvas.width * 0.2; // 20% desde la izquierda
+                } else {
+                    x = canvas.width * 0.6; // 60% desde la izquierda
+                }
+
+                platforms.push({
+                    x: x,
+                    y: currentHeight,
+                    width: platformWidth,
+                    height: 20
+                });
+
+                // Ajustar para la siguiente plataforma
+                currentHeight -= 150; // Distancia vertical entre plataformas
+                alternateLeft = !alternateLeft; // Alternar lado
+            }
+
+            // Plataforma superior final
+            platforms.push({
+                x: canvas.width * 0.4,
+                y: 100,
+                width: 200,
+                height: 20
+            });
+        }
+
+        function checkCollision(rect1, rect2) {
+            return rect1.x < rect2.x + rect2.width &&
+                   rect1.x + rect1.width > rect2.x &&
+                   rect1.y < rect2.y + rect2.height &&
+                   rect1.y + rect1.height > rect2.y;
         }
 
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            frameCount++;
-            if (frameCount % staggerFrames === 0) {
-                if (player.isMoving) {
-                    currentFrame = (currentFrame + 1) % loadedImages.walk.length;
-                } else {
-                    currentFrame = (currentFrame + 1) % loadedImages.quiet.length;
+            // Dibujar plataformas
+            ctx.fillStyle = '#666';
+            platforms.forEach(platform => {
+                ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+            });
+
+            // Gravedad y colisiones con plataformas
+            if (!player.isJumping) {
+                let isOnPlatform = false;
+                platforms.forEach(platform => {
+                    if (checkCollision({
+                        x: player.x,
+                        y: player.y + 1,
+                        width: player.width,
+                        height: player.height
+                    }, platform)) {
+                        // Solo detectar colisión si el jugador está por encima de la plataforma
+                        if (player.y + player.height <= platform.y + 10) {
+                            isOnPlatform = true;
+                            player.y = platform.y - player.height;
+                            player.velocityY = 0; // Resetear velocidad vertical al aterrizar
+                        }
+                    }
+                });
+
+                if (!isOnPlatform) {
+                    // Aumentar gradualmente la velocidad de caída
+                    player.velocityY = Math.min(player.velocityY + player.gravity, player.maxFallSpeed);
+                    player.y += player.velocityY;
                 }
             }
 
-            const currentImage = player.isMoving ? 
-                loadedImages.walk[currentFrame] : 
-                loadedImages.quiet[currentFrame];
+            if (!player.isJumping) {
+                let currentSpeed = keys.ShiftLeft ? player.runSpeed : player.walkSpeed;
+                
+                if (keys.d) {
+                    player.velocityX = currentSpeed;
+                    player.isMoving = true;
+                    player.isMovingLeft = false;
+                    if (player.x + player.velocityX <= canvas.width - player.width) {
+                        player.x += player.velocityX;
+                    }
+                } else if (keys.a) {
+                    player.velocityX = -currentSpeed;
+                    player.isMoving = true;
+                    player.isMovingLeft = true;
+                    if (player.x + player.velocityX >= 0) {
+                        player.x += player.velocityX;
+                    }
+                } else {
+                    player.velocityX = 0;
+                }
+            }
+
+            frameCount++;
+            if (frameCount % staggerFrames === 0) {
+                if (player.isJumping) {
+                    if (player.isMovingLeft) {
+                        currentFrame = (currentFrame + 1) % loadedImages.jump.left.length;
+                    } else {
+                        currentFrame = (currentFrame + 1) % loadedImages.jump.right.length;
+                    }
+                } else if (player.isMoving) {
+                    if (player.isMovingLeft) {
+                        currentFrame = (currentFrame + 1) % loadedImages.walk.left.length;
+                    } else {
+                        currentFrame = (currentFrame + 1) % loadedImages.walk.right.length;
+                    }
+                } else {
+                    if(!player.isMovingLeft){
+                        currentFrame = (currentFrame + 1) % loadedImages.quiet.right.length;
+                    }else{
+                        currentFrame = (currentFrame + 1) % loadedImages.quiet.left.length;
+                    }
+                }
+            }
+
+            let currentImage;
+            if (player.isJumping) {
+                currentImage = player.isMovingLeft ? 
+                    loadedImages.jump.left[currentFrame] : 
+                    loadedImages.jump.right[currentFrame];
+            } else if(!player.isMovingLeft){
+                currentImage = player.isMoving ? 
+                    loadedImages.walk.right[currentFrame] : 
+                    loadedImages.quiet.right[currentFrame];
+            }else{
+                currentImage = player.isMoving ? 
+                    loadedImages.walk.left[currentFrame] : 
+                    loadedImages.quiet.left[currentFrame];
+            }
 
             if (currentImage) {
+                previousImage = currentImage;
                 ctx.drawImage(
                     currentImage,
+                    player.x,
+                    player.y,
+                    player.width,
+                    player.height
+                );
+            } else if (previousImage) {
+                ctx.drawImage(
+                    previousImage,
                     player.x,
                     player.y,
                     player.width,
@@ -106,27 +335,123 @@
             requestAnimationFrame(animate);
         }
 
-        // Control de teclado
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight') {
+            if (e.key === 'd' || e.key === 'a' || e.key === 'ShiftLeft' || e.key === 'w') {
+                keys[e.key] = true;
+            }
+            
+            if (e.key === 'd') {
+                if (player.isMovingLeft) currentFrame = -1;
                 player.isMoving = true;
-                player.x += player.speed;
-            } else if (e.key === 'ArrowLeft') {
+                player.isMovingLeft = false;
+            } else if (e.key === 'a') {
+                if (!player.isMovingLeft) currentFrame = -1;
                 player.isMoving = true;
-                player.x -= player.speed;
+                player.isMovingLeft = true;
+            } else if (e.key === 'w' && !player.isJumping) {
+                player.isJumping = true;
+                currentFrame = -1;
+                let jumpStart = player.y;
+                let jumpTime = 0;
+                const jumpDuration = 60;
+
+                function jump() {
+                    jumpTime++;
+                    
+                    let progress = jumpTime / jumpDuration;
+                    let height = Math.sin(progress * Math.PI) * player.jumpHeight * (1 - Math.pow(progress - 0.5, 2) * 0.5);
+                    let newY = jumpStart - height;
+                    
+                    // Comprobar colisiones con plataformas
+                    let canMove = true;
+                    platforms.forEach(platform => {
+                        if (checkCollision({
+                            x: player.x,
+                            y: newY,
+                            width: player.width,
+                            height: player.height
+                        }, platform)) {
+                            // Si está cayendo y la parte inferior del jugador está por encima de la plataforma
+                            if (player.y + player.height <= platform.y && newY + player.height > platform.y) {
+                                newY = platform.y - player.height;
+                                jumpTime = jumpDuration;
+                                jumpStart = newY; // Actualizar jumpStart para el próximo salto
+                                canMove = false;
+                            }
+                        }
+                    });
+
+                    if (canMove) {
+                        player.y = newY;
+                    }
+
+                    // Movimiento horizontal con colisiones
+                    if (keys.d) {
+                        let newX = player.x + player.diagonalSpeed;
+                        let canMoveHorizontal = true;
+                        platforms.forEach(platform => {
+                            if (checkCollision({
+                                x: newX,
+                                y: player.y,
+                                width: player.width,
+                                height: player.height
+                            }, platform)) {
+                                canMoveHorizontal = false;
+                            }
+                        });
+                        if (canMoveHorizontal && newX <= canvas.width - player.width) {
+                            player.x = newX;
+                        }
+                        player.isMovingLeft = false;
+                    } else if (keys.a) {
+                        let newX = player.x - player.diagonalSpeed;
+                        let canMoveHorizontal = true;
+                        platforms.forEach(platform => {
+                            if (checkCollision({
+                                x: newX,
+                                y: player.y,
+                                width: player.width,
+                                height: player.height
+                            }, platform)) {
+                                canMoveHorizontal = false;
+                            }
+                        });
+                        if (canMoveHorizontal && newX >= 0) {
+                            player.x = newX;
+                        }
+                        player.isMovingLeft = true;
+                    }
+
+                    if (jumpTime >= jumpDuration) {
+                        player.y = jumpStart;
+                        player.isJumping = false;
+                        if (keys.d || keys.a) player.isMoving = true;
+                        return;
+                    }
+
+                    requestAnimationFrame(jump);
+                }
+                jump();
             }
         });
-
+        
         document.addEventListener('keyup', (e) => {
-            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-                player.isMoving = false;
+            if (e.key === 'd' || e.key === 'a' || e.key === 'ShiftLeft' || e.key === 'w') {
+                keys[e.key] = false;
+                if (e.key !== 'ShiftLeft' && !keys.d && !keys.a) {
+                    player.isMoving = false;
+                }
             }
         });
 
-        // Iniciar el juego
         async function startGame() {
-            await loadAllImages();
-            animate();
+            try {
+                await loadAllImages();
+                generatePlatforms();
+                animate();
+            } catch (error) {
+                console.error('Error cargando imágenes:', error);
+            }
         }
 
         startGame();
