@@ -291,9 +291,9 @@
                         currentFrame = (currentFrame + 1) % loadedImages.walk.right.length;
                     }
                 } else {
-                    if(!player.isMovingLeft){
+                    if (!player.isMovingLeft) {
                         currentFrame = (currentFrame + 1) % loadedImages.quiet.right.length;
-                    }else{
+                    } else {
                         currentFrame = (currentFrame + 1) % loadedImages.quiet.left.length;
                     }
                 }
@@ -304,11 +304,11 @@
                 currentImage = player.isMovingLeft ? 
                     loadedImages.jump.left[currentFrame] : 
                     loadedImages.jump.right[currentFrame];
-            } else if(!player.isMovingLeft){
+            } else if (!player.isMovingLeft) {
                 currentImage = player.isMoving ? 
                     loadedImages.walk.right[currentFrame] : 
                     loadedImages.quiet.right[currentFrame];
-            }else{
+            } else {
                 currentImage = player.isMoving ? 
                     loadedImages.walk.left[currentFrame] : 
                     loadedImages.quiet.left[currentFrame];
@@ -342,106 +342,102 @@
             }
             
             if (e.key === 'd') {
-                if (player.isMovingLeft) currentFrame = -1;
                 player.isMoving = true;
                 player.isMovingLeft = false;
+                console.log("derecha");
             } else if (e.key === 'a') {
-                if (!player.isMovingLeft) currentFrame = -1;
                 player.isMoving = true;
                 player.isMovingLeft = true;
-            } else if (e.key === 'w' && player.isOnGround && !player.isJumping) {
-                player.isJumping = true;
-                player.isOnGround = false;
-                currentFrame = -1;
-                let jumpStart = player.y;
-                let jumpTime = 0;
-                const jumpDuration = 60;
-
-                function jump() {
-                    jumpTime++;
-                    
-                    let progress = jumpTime / jumpDuration;
-                    let height = Math.sin(progress * Math.PI) * player.jumpHeight * (1 - Math.pow(progress - 0.5, 2) * 0.5);
-                    let newY = jumpStart - height;
-                    
-                    // Comprobar colisiones con plataformas
-                    let canMove = true;
-                    platforms.forEach(platform => {
-                        if (checkCollision({
-                            x: player.x,
-                            y: newY,
-                            width: player.width,
-                            height: player.height
-                        }, platform)) {
-                            // Si está cayendo y la parte inferior del jugador está por encima de la plataforma
-                            if (player.y + player.height <= platform.y && newY + player.height > platform.y) {
-                                newY = platform.y - player.height;
-                                jumpTime = jumpDuration;
-                                jumpStart = newY; // Actualizar jumpStart para el próximo salto
-                                canMove = false;
-                            }
-                        }
-                    });
-
-                    if (canMove) {
-                        player.y = newY;
-                    }
-
-                    // Movimiento horizontal con colisiones
-                    if (keys.d) {
-                        let newX = player.x + player.diagonalSpeed;
-                        let canMoveHorizontal = true;
-                        platforms.forEach(platform => {
-                            if (checkCollision({
-                                x: newX,
-                                y: player.y,
-                                width: player.width,
-                                height: player.height
-                            }, platform)) {
-                                canMoveHorizontal = false;
-                            }
-                        });
-                        if (canMoveHorizontal && newX <= canvas.width - player.width) {
-                            player.x = newX;
-                        }
-                        player.isMovingLeft = false;
-                    } else if (keys.a) {
-                        let newX = player.x - player.diagonalSpeed;
-                        let canMoveHorizontal = true;
-                        platforms.forEach(platform => {
-                            if (checkCollision({
-                                x: newX,
-                                y: player.y,
-                                width: player.width,
-                                height: player.height
-                            }, platform)) {
-                                canMoveHorizontal = false;
-                            }
-                        });
-                        if (canMoveHorizontal && newX >= 0) {
-                            player.x = newX;
-                        }
-                        player.isMovingLeft = true;
-                    }
-
-                    if (jumpTime >= jumpDuration) {
-                        player.y = jumpStart;
-                        player.isJumping = false;
-                        if (keys.d || keys.a) player.isMoving = true;
-                        return;
-                    }
-
-                    requestAnimationFrame(jump);
+                console.log("izquierda");
+            } else if (e.key === 'w') {
+                if (player.isOnGround && !player.isJumping) {
+                    console.log("salto");
+                    player.isJumping = true;
+                    player.isOnGround = false;
+                    currentFrame = 0;
+                    iniciarSalto();
                 }
-                jump();
             }
         });
-        
+
+        function iniciarSalto() {
+            let jumpStart = player.y;
+            let jumpTime = 0;
+            const jumpDuration = 60;
+
+            function jump() {
+                if (!player.isJumping) return;
+
+                jumpTime++;
+                let progress = jumpTime / jumpDuration;
+                let height = Math.sin(progress * Math.PI) * player.jumpHeight * 
+                            (1 - Math.pow(progress - 0.5, 2) * 0.5);
+                let newY = jumpStart - height;
+                
+                let canMove = true;
+                platforms.forEach(platform => {
+                    if (checkCollision({
+                        x: player.x,
+                        y: newY,
+                        width: player.width,
+                        height: player.height
+                    }, platform)) {
+                        if (player.y + player.height <= platform.y && 
+                            newY + player.height > platform.y) {
+                            newY = platform.y - player.height;
+                            if (keys.w) {
+                                jumpTime = 0;
+                                jumpStart = newY;
+                            } else {
+                                player.isJumping = false;
+                                player.isOnGround = true;
+                            }
+                            canMove = false;
+                        }
+                    }
+                });
+
+                if (canMove) {
+                    player.y = newY;
+                }
+
+                if (keys.d) {
+                    let newX = player.x + player.diagonalSpeed;
+                    if (newX <= canvas.width - player.width) {
+                        player.x = newX;
+                    }
+                    player.isMovingLeft = false;
+                } 
+                if (keys.a) {
+                    let newX = player.x - player.diagonalSpeed;
+                    if (newX >= 0) {
+                        player.x = newX;
+                    }
+                    player.isMovingLeft = true;
+                }
+
+                if (jumpTime >= jumpDuration) {
+                    if (keys.w) {
+                        jumpTime = 0;
+                        jumpStart = player.y;
+                    } else {
+                        player.isJumping = false;
+                        player.isOnGround = true;
+                        return;
+                    }
+                }
+
+                requestAnimationFrame(jump);
+            }
+            jump();
+        }
+
         document.addEventListener('keyup', (e) => {
             if (e.key === 'd' || e.key === 'a' || e.key === 'ShiftLeft' || e.key === 'w') {
                 keys[e.key] = false;
-                if (e.key !== 'ShiftLeft' && !keys.d && !keys.a) {
+                if ((e.key === 'd' || e.key === 'a') && !keys.d && !keys.a) {
                     player.isMoving = false;
+                    currentFrame = 0;
                 }
             }
         });
