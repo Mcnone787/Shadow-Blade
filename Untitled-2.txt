@@ -1,0 +1,302 @@
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 689, platformY: 769, velocityY: 0, isJumping: false}
+index.html:385 Durante salto: {jumpTime: 1, duration: 60, isJumping: true, y: 689}
+index.html:385 Durante salto: {jumpTime: 2, duration: 60, isJumping: true, y: 675.1331522604634}
+index.html:385 Durante salto: {jumpTime: 3, duration: 60, isJumping: true, y: 661.0560574864473}
+index.html:385 Durante salto: {jumpTime: 4, duration: 60, isJumping: true, y: 646.8213573635278}
+index.html:385 Durante salto: {jumpTime: 5, duration: 60, isJumping: true, y: 632.482672046039}
+index.html:385 Durante salto: {jumpTime: 6, duration: 60, isJumping: true, y: 618.0943657687886}
+index.html:385 Durante salto: {jumpTime: 7, duration: 60, isJumping: true, y: 603.7113095525145}
+index.html:385 Durante salto: {jumpTime: 8, duration: 60, isJumping: true, y: 589.3886420243042}
+index.html:385 Durante salto: {jumpTime: 9, duration: 60, isJumping: true, y: 575.1815293792886}
+index.html:385 Durante salto: {jumpTime: 10, duration: 60, isJumping: true, y: 561.1449255108502}
+index.html:385 Durante salto: {jumpTime: 11, duration: 60, isJumping: true, y: 547.3333333333334}
+index.html:385 Durante salto: {jumpTime: 12, duration: 60, isJumping: true, y: 533.8005683138429}
+index.html:385 Durante salto: {jumpTime: 13, duration: 60, isJumping: true, y: 520.5995252182065}
+index.html:385 Durante salto: {jumpTime: 14, duration: 60, isJumping: true, y: 507.7819490606072}
+index.html:385 Durante salto: {jumpTime: 15, duration: 60, isJumping: true, y: 495.398211226837}
+index.html:385 Durante salto: {jumpTime: 16, duration: 60, isJumping: true, y: 483.49709171765966}
+index.html:385 Durante salto: {jumpTime: 17, duration: 60, isJumping: true, y: 472.1255684315138}
+index.html:385 Durante salto: {jumpTime: 18, duration: 60, isJumping: true, y: 461.32861437483496}
+index.html:385 Durante salto: {jumpTime: 19, duration: 60, isJumping: true, y: 451.1490036537655}
+index.html:385 Durante salto: {jumpTime: 20, duration: 60, isJumping: true, y: 441.62712706309765}
+index.html:385 Durante salto: {jumpTime: 21, duration: 60, isJumping: true, y: 432.8008180471035}
+index.html:385 Durante salto: {jumpTime: 22, duration: 60, isJumping: true, y: 424.7051897626254}
+index.html:385 Durante salto: {jumpTime: 23, duration: 60, isJumping: true, y: 417.37248392760006}
+index.html:385 Durante salto: {jumpTime: 24, duration: 60, isJumping: true, y: 410.83193208827123}
+index.html:385 Durante salto: {jumpTime: 25, duration: 60, isJumping: true, y: 405.1096298858967}
+index.html:385 Durante salto: {jumpTime: 26, duration: 60, isJumping: true, y: 400.2284248489973}
+index.html:385 Durante salto: {jumpTime: 27, duration: 60, isJumping: true, y: 396.2078181803475}
+index.html:385 Durante salto: {jumpTime: 28, duration: 60, isJumping: true, y: 393.06388094918185}
+index.html:385 Durante salto: {jumpTime: 29, duration: 60, isJumping: true, y: 390.8091850387461}
+index.html:385 Durante salto: {jumpTime: 30, duration: 60, isJumping: true, y: 389.45274913757595}
+index.html:385 Durante salto: {jumpTime: 31, duration: 60, isJumping: true, y: 389}
+index.html:385 Durante salto: {jumpTime: 32, duration: 60, isJumping: true, y: 389.45274913757595}
+index.html:385 Durante salto: {jumpTime: 33, duration: 60, isJumping: true, y: 390.809185038746}
+index.html:385 Durante salto: {jumpTime: 34, duration: 60, isJumping: true, y: 393.0638809491819}
+index.html:385 Durante salto: {jumpTime: 35, duration: 60, isJumping: true, y: 396.2078181803475}
+index.html:385 Durante salto: {jumpTime: 36, duration: 60, isJumping: true, y: 400.2284248489973}
+index.html:385 Durante salto: {jumpTime: 37, duration: 60, isJumping: true, y: 405.10962988589665}
+index.html:385 Durante salto: {jumpTime: 38, duration: 60, isJumping: true, y: 410.83193208827123}
+index.html:385 Durante salto: {jumpTime: 39, duration: 60, isJumping: true, y: 417.37248392759994}
+index.html:385 Durante salto: {jumpTime: 40, duration: 60, isJumping: true, y: 424.70518976262537}
+index.html:385 Durante salto: {jumpTime: 41, duration: 60, isJumping: true, y: 432.8008180471035}
+index.html:385 Durante salto: {jumpTime: 42, duration: 60, isJumping: true, y: 441.62712706309765}
+index.html:385 Durante salto: {jumpTime: 43, duration: 60, isJumping: true, y: 451.1490036537655}
+index.html:385 Durante salto: {jumpTime: 44, duration: 60, isJumping: true, y: 461.32861437483484}
+index.html:385 Durante salto: {jumpTime: 45, duration: 60, isJumping: true, y: 472.1255684315137}
+index.html:385 Durante salto: {jumpTime: 46, duration: 60, isJumping: true, y: 483.4970917176596}
+index.html:385 Durante salto: {jumpTime: 47, duration: 60, isJumping: true, y: 495.3982112268371}
+index.html:385 Durante salto: {jumpTime: 48, duration: 60, isJumping: true, y: 507.78194906060725}
+index.html:385 Durante salto: {jumpTime: 49, duration: 60, isJumping: true, y: 520.5995252182064}
+index.html:385 Durante salto: {jumpTime: 50, duration: 60, isJumping: true, y: 533.8005683138429}
+index.html:385 Durante salto: {jumpTime: 51, duration: 60, isJumping: true, y: 547.3333333333334}
+index.html:385 Durante salto: {jumpTime: 52, duration: 60, isJumping: true, y: 561.1449255108502}
+index.html:385 Durante salto: {jumpTime: 53, duration: 60, isJumping: true, y: 575.1815293792886}
+index.html:385 Durante salto: {jumpTime: 54, duration: 60, isJumping: true, y: 589.3886420243041}
+index.html:385 Durante salto: {jumpTime: 55, duration: 60, isJumping: true, y: 603.7113095525145}
+index.html:385 Durante salto: {jumpTime: 56, duration: 60, isJumping: true, y: 618.0943657687885}
+index.html:385 Durante salto: {jumpTime: 57, duration: 60, isJumping: true, y: 632.482672046039}
+index.html:385 Durante salto: {jumpTime: 58, duration: 60, isJumping: true, y: 646.8213573635277}
+index.html:385 Durante salto: {jumpTime: 59, duration: 60, isJumping: true, y: 661.0560574864472}
+index.html:385 Durante salto: {jumpTime: 60, duration: 60, isJumping: true, y: 675.1331522604632}
+index.html:454 Fin del salto: {finalY: 689, velocityY: 0, isJumping: true}
+index.html:271 Durante caída: {velocityY: 0.8, y: 689.8, isJumping: false}
+index.html:271 Durante caída: {velocityY: 1.6, y: 691.4, isJumping: false}
+index.html:271 Durante caída: {velocityY: 2.4000000000000004, y: 693.8, isJumping: false}
+index.html:271 Durante caída: {velocityY: 3.2, y: 697, isJumping: false}
+index.html:271 Durante caída: {velocityY: 4, y: 701, isJumping: false}
+index.html:271 Durante caída: {velocityY: 4.8, y: 705.8, isJumping: false}
+index.html:271 Durante caída: {velocityY: 5.6, y: 711.4, isJumping: false}
+index.html:271 Durante caída: {velocityY: 6.3999999999999995, y: 717.8, isJumping: false}
+index.html:271 Durante caída: {velocityY: 7.199999999999999, y: 725, isJumping: false}
+index.html:271 Durante caída: {velocityY: 7.999999999999999, y: 733, isJumping: false}
+index.html:271 Durante caída: {velocityY: 8.799999999999999, y: 741.8, isJumping: false}
+index.html:271 Durante caída: {velocityY: 9.6, y: 751.4, isJumping: false}
+index.html:271 Durante caída: {velocityY: 10.4, y: 761.8, isJumping: false}
+index.html:271 Durante caída: {velocityY: 11.200000000000001, y: 773, isJumping: false}
+index.html:271 Durante caída: {velocityY: 12.000000000000002, y: 785, isJumping: false}
+index.html:271 Durante caída: {velocityY: 12.800000000000002, y: 797.8, isJumping: false}
+index.html:271 Durante caída: {velocityY: 13.600000000000003, y: 811.4, isJumping: false}
+index.html:271 Durante caída: {velocityY: 14.400000000000004, y: 825.8, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 825.8, platformY: 899, velocityY: 14.400000000000004, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}
+index.html:244 Colisión con plataforma: {playerY: 819, platformY: 899, velocityY: 0, isJumping: false}

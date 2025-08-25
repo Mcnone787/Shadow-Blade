@@ -1,0 +1,1076 @@
+ Iniciando carga de sprites enemigos...
+ Cargando frames para enemy 2/idle, frameCount: 6
+ Intentando cargar: sprites/enemy2/idle/frame1.png
+ Intentando cargar imagen: sprites/enemy2/idle/frame1.png
+ Imagen cargada exitosamente: sprites/enemy2/idle/frame1.png
+ Frame 1 cargado correctamente
+ Intentando cargar: sprites/enemy2/idle/frame2.png
+ Intentando cargar imagen: sprites/enemy2/idle/frame2.png
+ Imagen cargada exitosamente: sprites/enemy2/idle/frame2.png
+ Frame 2 cargado correctamente
+ Intentando cargar: sprites/enemy2/idle/frame3.png
+ Intentando cargar imagen: sprites/enemy2/idle/frame3.png
+ Imagen cargada exitosamente: sprites/enemy2/idle/frame3.png
+ Frame 3 cargado correctamente
+ Intentando cargar: sprites/enemy2/idle/frame4.png
+ Intentando cargar imagen: sprites/enemy2/idle/frame4.png
+ Imagen cargada exitosamente: sprites/enemy2/idle/frame4.png
+ Frame 4 cargado correctamente
+ Intentando cargar: sprites/enemy2/idle/frame5.png
+ Intentando cargar imagen: sprites/enemy2/idle/frame5.png
+ Imagen cargada exitosamente: sprites/enemy2/idle/frame5.png
+ Frame 5 cargado correctamente
+ Intentando cargar: sprites/enemy2/idle/frame6.png
+ Intentando cargar imagen: sprites/enemy2/idle/frame6.png
+ Imagen cargada exitosamente: sprites/enemy2/idle/frame6.png
+ Frame 6 cargado correctamente
+ Total de frames cargados para enemy 2/idle: 6
+ Cargando frames para enemy 2/walk, frameCount: 6
+ Intentando cargar: sprites/enemy2/walk/frame1.png
+ Intentando cargar imagen: sprites/enemy2/walk/frame1.png
+ Imagen cargada exitosamente: sprites/enemy2/walk/frame1.png
+ Frame 1 cargado correctamente
+ Intentando cargar: sprites/enemy2/walk/frame2.png
+ Intentando cargar imagen: sprites/enemy2/walk/frame2.png
+ Imagen cargada exitosamente: sprites/enemy2/walk/frame2.png
+ Frame 2 cargado correctamente
+ Intentando cargar: sprites/enemy2/walk/frame3.png
+ Intentando cargar imagen: sprites/enemy2/walk/frame3.png
+ Imagen cargada exitosamente: sprites/enemy2/walk/frame3.png
+ Frame 3 cargado correctamente
+ Intentando cargar: sprites/enemy2/walk/frame4.png
+ Intentando cargar imagen: sprites/enemy2/walk/frame4.png
+ Imagen cargada exitosamente: sprites/enemy2/walk/frame4.png
+ Frame 4 cargado correctamente
+ Intentando cargar: sprites/enemy2/walk/frame5.png
+ Intentando cargar imagen: sprites/enemy2/walk/frame5.png
+ Imagen cargada exitosamente: sprites/enemy2/walk/frame5.png
+ Frame 5 cargado correctamente
+ Intentando cargar: sprites/enemy2/walk/frame6.png
+ Intentando cargar imagen: sprites/enemy2/walk/frame6.png
+ Imagen cargada exitosamente: sprites/enemy2/walk/frame6.png
+ Frame 6 cargado correctamente
+ Total de frames cargados para enemy 2/walk: 6
+ Cargando frames para enemy 2/attack, frameCount: 6
+ Intentando cargar: sprites/enemy2/attack/frame1.png
+ Intentando cargar imagen: sprites/enemy2/attack/frame1.png
+ Imagen cargada exitosamente: sprites/enemy2/attack/frame1.png
+ Frame 1 cargado correctamente
+ Intentando cargar: sprites/enemy2/attack/frame2.png
+ Intentando cargar imagen: sprites/enemy2/attack/frame2.png
+ Imagen cargada exitosamente: sprites/enemy2/attack/frame2.png
+ Frame 2 cargado correctamente
+ Intentando cargar: sprites/enemy2/attack/frame3.png
+ Intentando cargar imagen: sprites/enemy2/attack/frame3.png
+ Imagen cargada exitosamente: sprites/enemy2/attack/frame3.png
+ Frame 3 cargado correctamente
+ Intentando cargar: sprites/enemy2/attack/frame4.png
+ Intentando cargar imagen: sprites/enemy2/attack/frame4.png
+ Imagen cargada exitosamente: sprites/enemy2/attack/frame4.png
+ Frame 4 cargado correctamente
+ Intentando cargar: sprites/enemy2/attack/frame5.png
+ Intentando cargar imagen: sprites/enemy2/attack/frame5.png
+ Imagen cargada exitosamente: sprites/enemy2/attack/frame5.png
+ Frame 5 cargado correctamente
+ Intentando cargar: sprites/enemy2/attack/frame6.png
+ Intentando cargar imagen: sprites/enemy2/attack/frame6.png
+ Imagen cargada exitosamente: sprites/enemy2/attack/frame6.png
+ Frame 6 cargado correctamente
+ Total de frames cargados para enemy 2/attack: 6
+ Cargando frames para enemy 2/hurt, frameCount: 3
+ Intentando cargar: sprites/enemy2/hurt/frame1.png
+ Intentando cargar imagen: sprites/enemy2/hurt/frame1.png
+ Imagen cargada exitosamente: sprites/enemy2/hurt/frame1.png
+ Frame 1 cargado correctamente
+ Intentando cargar: sprites/enemy2/hurt/frame2.png
+ Intentando cargar imagen: sprites/enemy2/hurt/frame2.png
+ Imagen cargada exitosamente: sprites/enemy2/hurt/frame2.png
+ Frame 2 cargado correctamente
+ Intentando cargar: sprites/enemy2/hurt/frame3.png
+ Intentando cargar imagen: sprites/enemy2/hurt/frame3.png
+ Imagen cargada exitosamente: sprites/enemy2/hurt/frame3.png
+ Frame 3 cargado correctamente
+ Total de frames cargados para enemy 2/hurt: 3
+ Cargando frames para enemy 2/death, frameCount: 6
+ Intentando cargar: sprites/enemy2/death/frame1.png
+ Intentando cargar imagen: sprites/enemy2/death/frame1.png
+ Imagen cargada exitosamente: sprites/enemy2/death/frame1.png
+ Frame 1 cargado correctamente
+ Intentando cargar: sprites/enemy2/death/frame2.png
+ Intentando cargar imagen: sprites/enemy2/death/frame2.png
+ Imagen cargada exitosamente: sprites/enemy2/death/frame2.png
+ Frame 2 cargado correctamente
+ Intentando cargar: sprites/enemy2/death/frame3.png
+ Intentando cargar imagen: sprites/enemy2/death/frame3.png
+ Imagen cargada exitosamente: sprites/enemy2/death/frame3.png
+ Frame 3 cargado correctamente
+ Intentando cargar: sprites/enemy2/death/frame4.png
+ Intentando cargar imagen: sprites/enemy2/death/frame4.png
+ Imagen cargada exitosamente: sprites/enemy2/death/frame4.png
+ Frame 4 cargado correctamente
+ Intentando cargar: sprites/enemy2/death/frame5.png
+ Intentando cargar imagen: sprites/enemy2/death/frame5.png
+ Imagen cargada exitosamente: sprites/enemy2/death/frame5.png
+ Frame 5 cargado correctamente
+ Intentando cargar: sprites/enemy2/death/frame6.png
+ Intentando cargar imagen: sprites/enemy2/death/frame6.png
+ Imagen cargada exitosamente: sprites/enemy2/death/frame6.png
+ Frame 6 cargado correctamente
+ Total de frames cargados para enemy 2/death: 6
+ Cargando frames para enemy 2/run, frameCount: 6
+ Intentando cargar: sprites/enemy2/run/frame1.png
+ Intentando cargar imagen: sprites/enemy2/run/frame1.png
+ Imagen cargada exitosamente: sprites/enemy2/run/frame1.png
+ Frame 1 cargado correctamente
+ Intentando cargar: sprites/enemy2/run/frame2.png
+ Intentando cargar imagen: sprites/enemy2/run/frame2.png
+ Imagen cargada exitosamente: sprites/enemy2/run/frame2.png
+ Frame 2 cargado correctamente
+ Intentando cargar: sprites/enemy2/run/frame3.png
+ Intentando cargar imagen: sprites/enemy2/run/frame3.png
+ Imagen cargada exitosamente: sprites/enemy2/run/frame3.png
+ Frame 3 cargado correctamente
+ Intentando cargar: sprites/enemy2/run/frame4.png
+ Intentando cargar imagen: sprites/enemy2/run/frame4.png
+ Imagen cargada exitosamente: sprites/enemy2/run/frame4.png
+ Frame 4 cargado correctamente
+ Intentando cargar: sprites/enemy2/run/frame5.png
+ Intentando cargar imagen: sprites/enemy2/run/frame5.png
+ Imagen cargada exitosamente: sprites/enemy2/run/frame5.png
+ Frame 5 cargado correctamente
+ Intentando cargar: sprites/enemy2/run/frame6.png
+ Intentando cargar imagen: sprites/enemy2/run/frame6.png
+ Imagen cargada exitosamente: sprites/enemy2/run/frame6.png
+ Frame 6 cargado correctamente
+ Total de frames cargados para enemy 2/run: 6
+ Cargando frames para enemy 2/jump, frameCount: 6
+ Intentando cargar: sprites/enemy2/jump/frame1.png
+ Intentando cargar imagen: sprites/enemy2/jump/frame1.png
+ Imagen cargada exitosamente: sprites/enemy2/jump/frame1.png
+ Frame 1 cargado correctamente
+ Intentando cargar: sprites/enemy2/jump/frame2.png
+ Intentando cargar imagen: sprites/enemy2/jump/frame2.png
+ Imagen cargada exitosamente: sprites/enemy2/jump/frame2.png
+ Frame 2 cargado correctamente
+ Intentando cargar: sprites/enemy2/jump/frame3.png
+ Intentando cargar imagen: sprites/enemy2/jump/frame3.png
+ Imagen cargada exitosamente: sprites/enemy2/jump/frame3.png
+ Frame 3 cargado correctamente
+ Intentando cargar: sprites/enemy2/jump/frame4.png
+ Intentando cargar imagen: sprites/enemy2/jump/frame4.png
+ Imagen cargada exitosamente: sprites/enemy2/jump/frame4.png
+ Frame 4 cargado correctamente
+ Intentando cargar: sprites/enemy2/jump/frame5.png
+ Intentando cargar imagen: sprites/enemy2/jump/frame5.png
+ Imagen cargada exitosamente: sprites/enemy2/jump/frame5.png
+ Frame 5 cargado correctamente
+ Intentando cargar: sprites/enemy2/jump/frame6.png
+ Intentando cargar imagen: sprites/enemy2/jump/frame6.png
+ Imagen cargada exitosamente: sprites/enemy2/jump/frame6.png
+ Frame 6 cargado correctamente
+ Total de frames cargados para enemy 2/jump: 6
+ Cargando frames para enemy 3/idle, frameCount: 6
+ Intentando cargar: sprites/enemy3/idle/frame1.png
+ Intentando cargar imagen: sprites/enemy3/idle/frame1.png
+ Imagen cargada exitosamente: sprites/enemy3/idle/frame1.png
+ Frame 1 cargado correctamente
+ Intentando cargar: sprites/enemy3/idle/frame2.png
+ Intentando cargar imagen: sprites/enemy3/idle/frame2.png
+ Imagen cargada exitosamente: sprites/enemy3/idle/frame2.png
+ Frame 2 cargado correctamente
+ Intentando cargar: sprites/enemy3/idle/frame3.png
+ Intentando cargar imagen: sprites/enemy3/idle/frame3.png
+ Imagen cargada exitosamente: sprites/enemy3/idle/frame3.png
+ Frame 3 cargado correctamente
+ Intentando cargar: sprites/enemy3/idle/frame4.png
+ Intentando cargar imagen: sprites/enemy3/idle/frame4.png
+ Imagen cargada exitosamente: sprites/enemy3/idle/frame4.png
+ Frame 4 cargado correctamente
+ Intentando cargar: sprites/enemy3/idle/frame5.png
+ Intentando cargar imagen: sprites/enemy3/idle/frame5.png
+ Imagen cargada exitosamente: sprites/enemy3/idle/frame5.png
+ Frame 5 cargado correctamente
+ Intentando cargar: sprites/enemy3/idle/frame6.png
+ Intentando cargar imagen: sprites/enemy3/idle/frame6.png
+ Imagen cargada exitosamente: sprites/enemy3/idle/frame6.png
+ Frame 6 cargado correctamente
+ Total de frames cargados para enemy 3/idle: 6
+ Cargando frames para enemy 3/walk, frameCount: 6
+ Intentando cargar: sprites/enemy3/walk/frame1.png
+ Intentando cargar imagen: sprites/enemy3/walk/frame1.png
+ Imagen cargada exitosamente: sprites/enemy3/walk/frame1.png
+ Frame 1 cargado correctamente
+ Intentando cargar: sprites/enemy3/walk/frame2.png
+ Intentando cargar imagen: sprites/enemy3/walk/frame2.png
+ Imagen cargada exitosamente: sprites/enemy3/walk/frame2.png
+ Frame 2 cargado correctamente
+ Intentando cargar: sprites/enemy3/walk/frame3.png
+ Intentando cargar imagen: sprites/enemy3/walk/frame3.png
+ Imagen cargada exitosamente: sprites/enemy3/walk/frame3.png
+ Frame 3 cargado correctamente
+ Intentando cargar: sprites/enemy3/walk/frame4.png
+ Intentando cargar imagen: sprites/enemy3/walk/frame4.png
+ Imagen cargada exitosamente: sprites/enemy3/walk/frame4.png
+ Frame 4 cargado correctamente
+ Intentando cargar: sprites/enemy3/walk/frame5.png
+ Intentando cargar imagen: sprites/enemy3/walk/frame5.png
+ Imagen cargada exitosamente: sprites/enemy3/walk/frame5.png
+ Frame 5 cargado correctamente
+ Intentando cargar: sprites/enemy3/walk/frame6.png
+ Intentando cargar imagen: sprites/enemy3/walk/frame6.png
+ Imagen cargada exitosamente: sprites/enemy3/walk/frame6.png
+ Frame 6 cargado correctamente
+ Total de frames cargados para enemy 3/walk: 6
+ Cargando frames para enemy 3/attack, frameCount: 6
+ Intentando cargar: sprites/enemy3/attack/frame1.png
+ Intentando cargar imagen: sprites/enemy3/attack/frame1.png
+ Imagen cargada exitosamente: sprites/enemy3/attack/frame1.png
+ Frame 1 cargado correctamente
+ Intentando cargar: sprites/enemy3/attack/frame2.png
+ Intentando cargar imagen: sprites/enemy3/attack/frame2.png
+ Imagen cargada exitosamente: sprites/enemy3/attack/frame2.png
+ Frame 2 cargado correctamente
+ Intentando cargar: sprites/enemy3/attack/frame3.png
+ Intentando cargar imagen: sprites/enemy3/attack/frame3.png
+ Imagen cargada exitosamente: sprites/enemy3/attack/frame3.png
+ Frame 3 cargado correctamente
+ Intentando cargar: sprites/enemy3/attack/frame4.png
+ Intentando cargar imagen: sprites/enemy3/attack/frame4.png
+ Imagen cargada exitosamente: sprites/enemy3/attack/frame4.png
+ Frame 4 cargado correctamente
+ Intentando cargar: sprites/enemy3/attack/frame5.png
+ Intentando cargar imagen: sprites/enemy3/attack/frame5.png
+ Imagen cargada exitosamente: sprites/enemy3/attack/frame5.png
+ Frame 5 cargado correctamente
+ Intentando cargar: sprites/enemy3/attack/frame6.png
+ Intentando cargar imagen: sprites/enemy3/attack/frame6.png
+ Imagen cargada exitosamente: sprites/enemy3/attack/frame6.png
+ Frame 6 cargado correctamente
+ Total de frames cargados para enemy 3/attack: 6
+ Cargando frames para enemy 3/hurt, frameCount: 3
+ Intentando cargar: sprites/enemy3/hurt/frame1.png
+ Intentando cargar imagen: sprites/enemy3/hurt/frame1.png
+ Imagen cargada exitosamente: sprites/enemy3/hurt/frame1.png
+ Frame 1 cargado correctamente
+ Intentando cargar: sprites/enemy3/hurt/frame2.png
+ Intentando cargar imagen: sprites/enemy3/hurt/frame2.png
+ Imagen cargada exitosamente: sprites/enemy3/hurt/frame2.png
+ Frame 2 cargado correctamente
+ Intentando cargar: sprites/enemy3/hurt/frame3.png
+ Intentando cargar imagen: sprites/enemy3/hurt/frame3.png
+ Imagen cargada exitosamente: sprites/enemy3/hurt/frame3.png
+ Frame 3 cargado correctamente
+ Total de frames cargados para enemy 3/hurt: 3
+ Cargando frames para enemy 3/death, frameCount: 6
+ Intentando cargar: sprites/enemy3/death/frame1.png
+ Intentando cargar imagen: sprites/enemy3/death/frame1.png
+ Imagen cargada exitosamente: sprites/enemy3/death/frame1.png
+ Frame 1 cargado correctamente
+ Intentando cargar: sprites/enemy3/death/frame2.png
+ Intentando cargar imagen: sprites/enemy3/death/frame2.png
+ Imagen cargada exitosamente: sprites/enemy3/death/frame2.png
+ Frame 2 cargado correctamente
+ Intentando cargar: sprites/enemy3/death/frame3.png
+ Intentando cargar imagen: sprites/enemy3/death/frame3.png
+ Imagen cargada exitosamente: sprites/enemy3/death/frame3.png
+ Frame 3 cargado correctamente
+ Intentando cargar: sprites/enemy3/death/frame4.png
+ Intentando cargar imagen: sprites/enemy3/death/frame4.png
+ Imagen cargada exitosamente: sprites/enemy3/death/frame4.png
+ Frame 4 cargado correctamente
+ Intentando cargar: sprites/enemy3/death/frame5.png
+ Intentando cargar imagen: sprites/enemy3/death/frame5.png
+ Imagen cargada exitosamente: sprites/enemy3/death/frame5.png
+ Frame 5 cargado correctamente
+ Intentando cargar: sprites/enemy3/death/frame6.png
+ Intentando cargar imagen: sprites/enemy3/death/frame6.png
+ Imagen cargada exitosamente: sprites/enemy3/death/frame6.png
+ Frame 6 cargado correctamente
+ Total de frames cargados para enemy 3/death: 6
+ Cargando frames para enemy 3/run, frameCount: 6
+ Intentando cargar: sprites/enemy3/run/frame1.png
+ Intentando cargar imagen: sprites/enemy3/run/frame1.png
+ Imagen cargada exitosamente: sprites/enemy3/run/frame1.png
+ Frame 1 cargado correctamente
+ Intentando cargar: sprites/enemy3/run/frame2.png
+ Intentando cargar imagen: sprites/enemy3/run/frame2.png
+ Imagen cargada exitosamente: sprites/enemy3/run/frame2.png
+ Frame 2 cargado correctamente
+ Intentando cargar: sprites/enemy3/run/frame3.png
+ Intentando cargar imagen: sprites/enemy3/run/frame3.png
+ Imagen cargada exitosamente: sprites/enemy3/run/frame3.png
+ Frame 3 cargado correctamente
+ Intentando cargar: sprites/enemy3/run/frame4.png
+ Intentando cargar imagen: sprites/enemy3/run/frame4.png
+ Imagen cargada exitosamente: sprites/enemy3/run/frame4.png
+ Frame 4 cargado correctamente
+ Intentando cargar: sprites/enemy3/run/frame5.png
+ Intentando cargar imagen: sprites/enemy3/run/frame5.png
+ Imagen cargada exitosamente: sprites/enemy3/run/frame5.png
+ Frame 5 cargado correctamente
+ Intentando cargar: sprites/enemy3/run/frame6.png
+ Intentando cargar imagen: sprites/enemy3/run/frame6.png
+ Imagen cargada exitosamente: sprites/enemy3/run/frame6.png
+ Frame 6 cargado correctamente
+ Total de frames cargados para enemy 3/run: 6
+ Cargando frames para enemy 3/jump, frameCount: 6
+ Intentando cargar: sprites/enemy3/jump/frame1.png
+ Intentando cargar imagen: sprites/enemy3/jump/frame1.png
+ Imagen cargada exitosamente: sprites/enemy3/jump/frame1.png
+ Frame 1 cargado correctamente
+ Intentando cargar: sprites/enemy3/jump/frame2.png
+enemy-sprite-loader.js:90 Intentando cargar imagen: sprites/enemy3/jump/frame2.png
+enemy-sprite-loader.js:94 Imagen cargada exitosamente: sprites/enemy3/jump/frame2.png
+enemy-sprite-loader.js:79 Frame 2 cargado correctamente
+enemy-sprite-loader.js:76 Intentando cargar: sprites/enemy3/jump/frame3.png
+enemy-sprite-loader.js:90 Intentando cargar imagen: sprites/enemy3/jump/frame3.png
+enemy-sprite-loader.js:94 Imagen cargada exitosamente: sprites/enemy3/jump/frame3.png
+enemy-sprite-loader.js:79 Frame 3 cargado correctamente
+enemy-sprite-loader.js:76 Intentando cargar: sprites/enemy3/jump/frame4.png
+enemy-sprite-loader.js:90 Intentando cargar imagen: sprites/enemy3/jump/frame4.png
+enemy-sprite-loader.js:94 Imagen cargada exitosamente: sprites/enemy3/jump/frame4.png
+enemy-sprite-loader.js:79 Frame 4 cargado correctamente
+enemy-sprite-loader.js:76 Intentando cargar: sprites/enemy3/jump/frame5.png
+enemy-sprite-loader.js:90 Intentando cargar imagen: sprites/enemy3/jump/frame5.png
+enemy-sprite-loader.js:94 Imagen cargada exitosamente: sprites/enemy3/jump/frame5.png
+enemy-sprite-loader.js:79 Frame 5 cargado correctamente
+enemy-sprite-loader.js:76 Intentando cargar: sprites/enemy3/jump/frame6.png
+enemy-sprite-loader.js:90 Intentando cargar imagen: sprites/enemy3/jump/frame6.png
+enemy-sprite-loader.js:94 Imagen cargada exitosamente: sprites/enemy3/jump/frame6.png
+enemy-sprite-loader.js:79 Frame 6 cargado correctamente
+enemy-sprite-loader.js:85 Total de frames cargados para enemy 3/jump: 6
+enemy-sprite-loader.js:59 Sprites de enemigos cargados correctamente
+enemy.js:64 Enemy update start: {x: 423.38960886262026, y: 302.3787542848428, velocityX: 0, velocityY: 0, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 423.38960886262026, oldY: 302.3787542848428, newX: 423.4396088626203, newY: 302.8787542848428, deltaX: 0.05000000000001137, …}
+enemy.js:64 Enemy update start: {x: 423.4396088626203, y: 302.8787542848428, velocityX: 0.05, velocityY: 0.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 423.4396088626203, oldY: 302.8787542848428, newX: 423.5396088626203, newY: 303.8787542848428, deltaX: 0.10000000000002274, …}
+enemy.js:64 Enemy update start: {x: 423.5396088626203, y: 303.8787542848428, velocityX: 0.1, velocityY: 1, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 423.5396088626203, oldY: 303.8787542848428, newX: 423.6896088626203, newY: 305.3787542848428, deltaX: 0.14999999999997726, …}
+enemy.js:64 Enemy update start: {x: 423.6896088626203, y: 305.3787542848428, velocityX: 0.15000000000000002, velocityY: 1.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 423.6896088626203, oldY: 305.3787542848428, newX: 423.88960886262026, newY: 307.3787542848428, deltaX: 0.19999999999998863, …}
+enemy.js:64 Enemy update start: {x: 423.88960886262026, y: 307.3787542848428, velocityX: 0.2, velocityY: 2, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 423.88960886262026, oldY: 307.3787542848428, newX: 424.13960886262026, newY: 309.8787542848428, deltaX: 0.25, …}
+enemy.js:64 Enemy update start: {x: 424.13960886262026, y: 309.8787542848428, velocityX: 0.25, velocityY: 2.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 424.13960886262026, oldY: 309.8787542848428, newX: 424.4396088626203, newY: 312.8787542848428, deltaX: 0.30000000000001137, …}
+enemy.js:64 Enemy update start: {x: 424.4396088626203, y: 312.8787542848428, velocityX: 0.3, velocityY: 3, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 424.4396088626203, oldY: 312.8787542848428, newX: 424.7896088626203, newY: 316.3787542848428, deltaX: 0.35000000000002274, …}
+enemy.js:64 Enemy update start: {x: 424.7896088626203, y: 316.3787542848428, velocityX: 0.35, velocityY: 3.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 424.7896088626203, oldY: 316.3787542848428, newX: 425.1896088626203, newY: 320.3787542848428, deltaX: 0.39999999999997726, …}
+enemy.js:64 Enemy update start: {x: 425.1896088626203, y: 320.3787542848428, velocityX: 0.39999999999999997, velocityY: 4, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 425.1896088626203, oldY: 320.3787542848428, newX: 425.63960886262026, newY: 324.8787542848428, deltaX: 0.44999999999998863, …}
+enemy.js:64 Enemy update start: {x: 425.63960886262026, y: 324.8787542848428, velocityX: 0.44999999999999996, velocityY: 4.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 425.63960886262026, oldY: 324.8787542848428, newX: 426.13960886262026, newY: 329.8787542848428, deltaX: 0.5, …}
+enemy.js:64 Enemy update start: {x: 426.13960886262026, y: 329.8787542848428, velocityX: 0.49999999999999994, velocityY: 5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 426.13960886262026, oldY: 329.8787542848428, newX: 426.6896088626203, newY: 335.3787542848428, deltaX: 0.5500000000000114, …}
+enemy.js:64 Enemy update start: {x: 426.6896088626203, y: 335.3787542848428, velocityX: 0.5499999999999999, velocityY: 5.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 426.6896088626203, oldY: 335.3787542848428, newX: 427.2896088626203, newY: 341.3787542848428, deltaX: 0.6000000000000227, …}
+enemy.js:64 Enemy update start: {x: 427.2896088626203, y: 341.3787542848428, velocityX: 0.6, velocityY: 6, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 427.2896088626203, oldY: 341.3787542848428, newX: 427.9396088626203, newY: 347.8787542848428, deltaX: 0.6499999999999773, …}
+enemy.js:64 Enemy update start: {x: 427.9396088626203, y: 347.8787542848428, velocityX: 0.65, velocityY: 6.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 427.9396088626203, oldY: 347.8787542848428, newX: 428.63960886262026, newY: 354.8787542848428, deltaX: 0.6999999999999886, …}
+enemy.js:64 Enemy update start: {x: 428.63960886262026, y: 354.8787542848428, velocityX: 0.7000000000000001, velocityY: 7, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 428.63960886262026, oldY: 354.8787542848428, newX: 429.38960886262026, newY: 362.3787542848428, deltaX: 0.75, …}
+enemy.js:64 Enemy update start: {x: 429.38960886262026, y: 362.3787542848428, velocityX: 0.7500000000000001, velocityY: 7.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 429.38960886262026, oldY: 362.3787542848428, newX: 430.1896088626203, newY: 370.3787542848428, deltaX: 0.8000000000000114, …}
+enemy.js:64 Enemy update start: {x: 430.1896088626203, y: 370.3787542848428, velocityX: 0.8000000000000002, velocityY: 8, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 430.1896088626203, oldY: 370.3787542848428, newX: 431.0396088626203, newY: 378.8787542848428, deltaX: 0.8500000000000227, …}
+enemy.js:64 Enemy update start: {x: 431.0396088626203, y: 378.8787542848428, velocityX: 0.8500000000000002, velocityY: 8.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 431.0396088626203, oldY: 378.8787542848428, newX: 431.9396088626203, newY: 387.8787542848428, deltaX: 0.8999999999999773, …}
+enemy.js:64 Enemy update start: {x: 431.9396088626203, y: 387.8787542848428, velocityX: 0.9000000000000002, velocityY: 9, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 431.9396088626203, oldY: 387.8787542848428, newX: 432.88960886262026, newY: 397.3787542848428, deltaX: 0.9499999999999886, …}
+enemy.js:64 Enemy update start: {x: 432.88960886262026, y: 397.3787542848428, velocityX: 0.9500000000000003, velocityY: 9.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 432.88960886262026, oldY: 397.3787542848428, newX: 433.88960886262026, newY: 407.3787542848428, deltaX: 1, …}
+enemy.js:64 Enemy update start: {x: 433.88960886262026, y: 407.3787542848428, velocityX: 1.0000000000000002, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 433.88960886262026, oldY: 407.3787542848428, newX: 434.9396088626203, newY: 417.3787542848428, deltaX: 1.0500000000000114, …}
+enemy.js:64 Enemy update start: {x: 434.9396088626203, y: 417.3787542848428, velocityX: 1.0500000000000003, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 434.9396088626203, oldY: 417.3787542848428, newX: 436.00316159008037, newY: 427.3787542848428, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 436.00316159008037, y: 427.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 436.00316159008037, oldY: 427.3787542848428, newX: 437.06671431754046, newY: 437.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 437.06671431754046, y: 437.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 437.06671431754046, oldY: 437.3787542848428, newX: 438.13026704500055, newY: 447.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 438.13026704500055, y: 447.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 438.13026704500055, oldY: 447.3787542848428, newX: 439.19381977246064, newY: 457.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 439.19381977246064, y: 457.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 439.19381977246064, oldY: 457.3787542848428, newX: 440.25737249992073, newY: 467.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 440.25737249992073, y: 467.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 440.25737249992073, oldY: 467.3787542848428, newX: 441.3209252273808, newY: 477.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 441.3209252273808, y: 477.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 441.3209252273808, oldY: 477.3787542848428, newX: 442.3844779548409, newY: 487.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 442.3844779548409, y: 487.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 442.3844779548409, oldY: 487.3787542848428, newX: 443.448030682301, newY: 497.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 443.448030682301, y: 497.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 443.448030682301, oldY: 497.3787542848428, newX: 444.5115834097611, newY: 507.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 444.5115834097611, y: 507.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 444.5115834097611, oldY: 507.3787542848428, newX: 445.5751361372212, newY: 517.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 445.5751361372212, y: 517.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 445.5751361372212, oldY: 517.3787542848428, newX: 446.6386888646813, newY: 527.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 446.6386888646813, y: 527.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 446.6386888646813, oldY: 527.3787542848428, newX: 447.7022415921414, newY: 537.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 447.7022415921414, y: 537.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 447.7022415921414, oldY: 537.3787542848428, newX: 448.76579431960147, newY: 547.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 448.76579431960147, y: 547.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 448.76579431960147, oldY: 547.3787542848428, newX: 449.82934704706156, newY: 557.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 449.82934704706156, y: 557.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 449.82934704706156, oldY: 557.3787542848428, newX: 450.89289977452165, newY: 567.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 450.89289977452165, y: 567.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 450.89289977452165, oldY: 567.3787542848428, newX: 451.95645250198174, newY: 577.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 451.95645250198174, y: 577.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 451.95645250198174, oldY: 577.3787542848428, newX: 453.02000522944184, newY: 587.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 453.02000522944184, y: 587.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 453.02000522944184, oldY: 587.3787542848428, newX: 454.0835579569019, newY: 597.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 952.2764318496373, y: 241.95513011683167, velocityX: 0, velocityY: 0, isOnGround: false, …}
+ Enemy update end: {oldX: 952.2764318496373, oldY: 241.95513011683167, newX: 952.3264318496373, newY: 242.45513011683167, deltaX: 0.049999999999954525, …}
+ Enemy update start: {x: 454.0835579569019, y: 597.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+ Enemy update end: {oldX: 454.0835579569019, oldY: 597.3787542848428, newX: 455.147110684362, newY: 607.3787542848428, deltaX: 1.0635527274600918, …}
+ Enemy update start: {x: 952.3264318496373, y: 242.45513011683167, velocityX: 0.05, velocityY: 0.5, isOnGround: false, …}
+ Enemy update end: {oldX: 952.3264318496373, oldY: 242.45513011683167, newX: 952.4264318496373, newY: 243.45513011683167, deltaX: 0.10000000000002274, …}
+ Enemy update start: {x: 455.147110684362, y: 607.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 455.147110684362, oldY: 607.3787542848428, newX: 456.2106634118221, newY: 617.3787542848428, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 952.4264318496373, y: 243.45513011683167, velocityX: 0.1, velocityY: 1, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 952.4264318496373, oldY: 243.45513011683167, newX: 952.5764318496373, newY: 244.95513011683167, deltaX: 0.14999999999997726, …}
+enemy.js:64 Enemy update start: {x: 456.2106634118221, y: 617.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 456.2106634118221, oldY: 617.3787542848428, newX: 457.2742161392822, newY: 627.3787542848428, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 952.5764318496373, y: 244.95513011683167, velocityX: 0.15000000000000002, velocityY: 1.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 952.5764318496373, oldY: 244.95513011683167, newX: 952.7764318496373, newY: 246.95513011683167, deltaX: 0.20000000000004547, …}
+enemy.js:64 Enemy update start: {x: 457.2742161392822, y: 627.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 457.2742161392822, oldY: 627.3787542848428, newX: 458.3377688667423, newY: 637.3787542848428, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 952.7764318496373, y: 246.95513011683167, velocityX: 0.2, velocityY: 2, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 952.7764318496373, oldY: 246.95513011683167, newX: 953.0264318496373, newY: 249.45513011683167, deltaX: 0.25, …}
+enemy.js:64 Enemy update start: {x: 458.3377688667423, y: 637.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 458.3377688667423, oldY: 637.3787542848428, newX: 459.4013215942024, newY: 647.3787542848428, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 953.0264318496373, y: 249.45513011683167, velocityX: 0.25, velocityY: 2.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 953.0264318496373, oldY: 249.45513011683167, newX: 953.3264318496373, newY: 252.45513011683167, deltaX: 0.2999999999999545, …}
+enemy.js:64 Enemy update start: {x: 459.4013215942024, y: 647.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 459.4013215942024, oldY: 647.3787542848428, newX: 460.4648743216625, newY: 657.3787542848428, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 953.3264318496373, y: 252.45513011683167, velocityX: 0.3, velocityY: 3, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 953.3264318496373, oldY: 252.45513011683167, newX: 953.6764318496373, newY: 255.95513011683167, deltaX: 0.35000000000002274, …}
+enemy.js:64 Enemy update start: {x: 460.4648743216625, y: 657.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 460.4648743216625, oldY: 657.3787542848428, newX: 461.52842704912257, newY: 667.3787542848428, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 953.6764318496373, y: 255.95513011683167, velocityX: 0.35, velocityY: 3.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 953.6764318496373, oldY: 255.95513011683167, newX: 954.0764318496373, newY: 259.9551301168317, deltaX: 0.39999999999997726, …}
+enemy.js:64 Enemy update start: {x: 461.52842704912257, y: 667.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 461.52842704912257, oldY: 667.3787542848428, newX: 462.59197977658266, newY: 677.3787542848428, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 954.0764318496373, y: 259.9551301168317, velocityX: 0.39999999999999997, velocityY: 4, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 954.0764318496373, oldY: 259.9551301168317, newX: 954.5264318496373, newY: 264.4551301168317, deltaX: 0.4500000000000455, …}
+enemy.js:64 Enemy update start: {x: 462.59197977658266, y: 677.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 462.59197977658266, oldY: 677.3787542848428, newX: 463.65553250404275, newY: 687.3787542848428, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 954.5264318496373, y: 264.4551301168317, velocityX: 0.44999999999999996, velocityY: 4.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 954.5264318496373, oldY: 264.4551301168317, newX: 955.0264318496373, newY: 269.4551301168317, deltaX: 0.5, …}
+enemy.js:64 Enemy update start: {x: 463.65553250404275, y: 687.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 463.65553250404275, oldY: 687.3787542848428, newX: 464.71908523150285, newY: 697.3787542848428, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 955.0264318496373, y: 269.4551301168317, velocityX: 0.49999999999999994, velocityY: 5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 955.0264318496373, oldY: 269.4551301168317, newX: 955.5764318496373, newY: 274.9551301168317, deltaX: 0.5499999999999545, …}
+enemy.js:64 Enemy update start: {x: 464.71908523150285, y: 697.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 464.71908523150285, oldY: 697.3787542848428, newX: 465.78263795896294, newY: 707.3787542848428, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 955.5764318496373, y: 274.9551301168317, velocityX: 0.5499999999999999, velocityY: 5.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 955.5764318496373, oldY: 274.9551301168317, newX: 956.1764318496373, newY: 280.9551301168317, deltaX: 0.6000000000000227, …}
+enemy.js:64 Enemy update start: {x: 465.78263795896294, y: 707.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 465.78263795896294, oldY: 707.3787542848428, newX: 466.84619068642303, newY: 717.3787542848428, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 956.1764318496373, y: 280.9551301168317, velocityX: 0.6, velocityY: 6, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 956.1764318496373, oldY: 280.9551301168317, newX: 956.8264318496373, newY: 287.4551301168317, deltaX: 0.6499999999999773, …}
+enemy.js:64 Enemy update start: {x: 466.84619068642303, y: 717.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 466.84619068642303, oldY: 717.3787542848428, newX: 467.9097434138831, newY: 727.3787542848428, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 956.8264318496373, y: 287.4551301168317, velocityX: 0.65, velocityY: 6.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 956.8264318496373, oldY: 287.4551301168317, newX: 957.5264318496373, newY: 294.4551301168317, deltaX: 0.7000000000000455, …}
+enemy.js:64 Enemy update start: {x: 467.9097434138831, y: 727.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 467.9097434138831, oldY: 727.3787542848428, newX: 468.9732961413432, newY: 737.3787542848428, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 957.5264318496373, y: 294.4551301168317, velocityX: 0.7000000000000001, velocityY: 7, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 957.5264318496373, oldY: 294.4551301168317, newX: 958.2764318496373, newY: 301.9551301168317, deltaX: 0.75, …}
+enemy.js:64 Enemy update start: {x: 468.9732961413432, y: 737.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 468.9732961413432, oldY: 737.3787542848428, newX: 470.0368488688033, newY: 747.3787542848428, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 958.2764318496373, y: 301.9551301168317, velocityX: 0.7500000000000001, velocityY: 7.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 958.2764318496373, oldY: 301.9551301168317, newX: 959.0764318496373, newY: 309.9551301168317, deltaX: 0.7999999999999545, …}
+enemy.js:64 Enemy update start: {x: 470.0368488688033, y: 747.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 470.0368488688033, oldY: 747.3787542848428, newX: 471.1004015962634, newY: 757.3787542848428, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 959.0764318496373, y: 309.9551301168317, velocityX: 0.8000000000000002, velocityY: 8, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 959.0764318496373, oldY: 309.9551301168317, newX: 959.9264318496373, newY: 318.4551301168317, deltaX: 0.8500000000000227, …}
+enemy.js:64 Enemy update start: {x: 471.1004015962634, y: 757.3787542848428, velocityX: 1.0635527274600989, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 471.1004015962634, oldY: 757.3787542848428, newX: 472.1639543237235, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 959.9264318496373, y: 318.4551301168317, velocityX: 0.8500000000000002, velocityY: 8.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 959.9264318496373, oldY: 318.4551301168317, newX: 960.8264318496373, newY: 327.4551301168317, deltaX: 0.8999999999999773, …}
+enemy.js:64 Enemy update start: {x: 472.1639543237235, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 472.1639543237235, oldY: 770, newX: 473.2275070511836, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 960.8264318496373, y: 327.4551301168317, velocityX: 0.9000000000000002, velocityY: 9, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 960.8264318496373, oldY: 327.4551301168317, newX: 961.7764318496373, newY: 336.9551301168317, deltaX: 0.9500000000000455, …}
+enemy.js:64 Enemy update start: {x: 473.2275070511836, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 473.2275070511836, oldY: 770, newX: 474.29105977864367, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 961.7764318496373, y: 336.9551301168317, velocityX: 0.9500000000000003, velocityY: 9.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 961.7764318496373, oldY: 336.9551301168317, newX: 962.7764318496373, newY: 346.9551301168317, deltaX: 1, …}
+enemy.js:64 Enemy update start: {x: 474.29105977864367, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 474.29105977864367, oldY: 770, newX: 475.35461250610376, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 962.7764318496373, y: 346.9551301168317, velocityX: 1.0000000000000002, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 962.7764318496373, oldY: 346.9551301168317, newX: 963.8264318496373, newY: 356.9551301168317, deltaX: 1.0499999999999545, …}
+enemy.js:64 Enemy update start: {x: 475.35461250610376, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 475.35461250610376, oldY: 770, newX: 476.41816523356385, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 963.8264318496373, y: 356.9551301168317, velocityX: 1.0500000000000003, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 963.8264318496373, oldY: 356.9551301168317, newX: 964.9264318496373, newY: 366.9551301168317, deltaX: 1.1000000000000227, …}
+enemy.js:64 Enemy update start: {x: 476.41816523356385, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 476.41816523356385, oldY: 770, newX: 477.48171796102395, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 964.9264318496373, y: 366.9551301168317, velocityX: 1.1000000000000003, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 964.9264318496373, oldY: 366.9551301168317, newX: 966.0764318496373, newY: 376.9551301168317, deltaX: 1.1499999999999773, …}
+enemy.js:64 Enemy update start: {x: 477.48171796102395, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 477.48171796102395, oldY: 770, newX: 478.54527068848404, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 966.0764318496373, y: 376.9551301168317, velocityX: 1.1500000000000004, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 966.0764318496373, oldY: 376.9551301168317, newX: 967.2764318496373, newY: 386.9551301168317, deltaX: 1.2000000000000455, …}
+enemy.js:64 Enemy update start: {x: 478.54527068848404, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 478.54527068848404, oldY: 770, newX: 479.60882341594413, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 967.2764318496373, y: 386.9551301168317, velocityX: 1.2000000000000004, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 967.2764318496373, oldY: 386.9551301168317, newX: 968.5264318496373, newY: 396.9551301168317, deltaX: 1.25, …}
+enemy.js:64 Enemy update start: {x: 479.60882341594413, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 479.60882341594413, oldY: 770, newX: 480.6723761434042, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 968.5264318496373, y: 396.9551301168317, velocityX: 1.2500000000000004, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 968.5264318496373, oldY: 396.9551301168317, newX: 969.8264318496373, newY: 406.9551301168317, deltaX: 1.2999999999999545, …}
+enemy.js:64 Enemy update start: {x: 480.6723761434042, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 480.6723761434042, oldY: 770, newX: 481.7359288708643, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 969.8264318496373, y: 406.9551301168317, velocityX: 1.3000000000000005, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 969.8264318496373, oldY: 406.9551301168317, newX: 971.1764318496373, newY: 416.9551301168317, deltaX: 1.3500000000000227, …}
+enemy.js:64 Enemy update start: {x: 481.7359288708643, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 481.7359288708643, oldY: 770, newX: 482.7994815983244, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 971.1764318496373, y: 416.9551301168317, velocityX: 1.3500000000000005, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 971.1764318496373, oldY: 416.9551301168317, newX: 972.5570365549676, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 482.7994815983244, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 482.7994815983244, oldY: 770, newX: 483.8630343257845, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 972.5570365549676, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 972.5570365549676, oldY: 428.6818064729815, newX: 973.9376412602978, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 483.8630343257845, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 483.8630343257845, oldY: 770, newX: 484.9265870532446, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 973.9376412602978, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 973.9376412602978, oldY: 428.6818064729815, newX: 975.3182459656281, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 484.9265870532446, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 484.9265870532446, oldY: 770, newX: 485.9901397807047, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 975.3182459656281, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 975.3182459656281, oldY: 428.6818064729815, newX: 976.6988506709583, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 485.9901397807047, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 485.9901397807047, oldY: 770, newX: 487.0536925081648, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 976.6988506709583, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 976.6988506709583, oldY: 428.6818064729815, newX: 978.0794553762886, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 487.0536925081648, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 487.0536925081648, oldY: 770, newX: 488.11724523562486, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 978.0794553762886, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 978.0794553762886, oldY: 428.6818064729815, newX: 979.4600600816188, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 488.11724523562486, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 488.11724523562486, oldY: 770, newX: 489.18079796308496, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 979.4600600816188, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 979.4600600816188, oldY: 428.6818064729815, newX: 980.8406647869491, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 489.18079796308496, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 489.18079796308496, oldY: 770, newX: 490.24435069054505, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 980.8406647869491, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 980.8406647869491, oldY: 428.6818064729815, newX: 982.2212694922794, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 490.24435069054505, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 490.24435069054505, oldY: 770, newX: 491.30790341800514, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 982.2212694922794, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 982.2212694922794, oldY: 428.6818064729815, newX: 983.6018741976096, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 491.30790341800514, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 491.30790341800514, oldY: 770, newX: 492.37145614546523, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 983.6018741976096, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 983.6018741976096, oldY: 428.6818064729815, newX: 984.9824789029399, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 492.37145614546523, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 492.37145614546523, oldY: 770, newX: 493.4350088729253, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 984.9824789029399, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 984.9824789029399, oldY: 428.6818064729815, newX: 986.3630836082701, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1474.0810919287983, y: 250.90057217861582, velocityX: 0, velocityY: 0, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1474.0810919287983, oldY: 250.90057217861582, newX: 1474.0310919287983, newY: 251.40057217861582, deltaX: -0.049999999999954525, …}
+enemy.js:64 Enemy update start: {x: 493.4350088729253, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 493.4350088729253, oldY: 770, newX: 494.4985616003854, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 986.3630836082701, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 986.3630836082701, oldY: 428.6818064729815, newX: 987.7436883136004, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1474.0310919287983, y: 251.40057217861582, velocityX: -0.05, velocityY: 0.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1474.0310919287983, oldY: 251.40057217861582, newX: 1473.9310919287984, newY: 252.40057217861582, deltaX: -0.09999999999990905, …}
+enemy.js:64 Enemy update start: {x: 494.4985616003854, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 494.4985616003854, oldY: 770, newX: 495.5621143278455, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 987.7436883136004, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 987.7436883136004, oldY: 428.6818064729815, newX: 989.1242930189306, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1473.9310919287984, y: 252.40057217861582, velocityX: -0.1, velocityY: 1, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1473.9310919287984, oldY: 252.40057217861582, newX: 1473.7810919287983, newY: 253.90057217861582, deltaX: -0.15000000000009095, …}
+enemy.js:64 Enemy update start: {x: 495.5621143278455, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 495.5621143278455, oldY: 770, newX: 496.6256670553056, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 989.1242930189306, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 989.1242930189306, oldY: 428.6818064729815, newX: 990.5048977242609, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1473.7810919287983, y: 253.90057217861582, velocityX: -0.15000000000000002, velocityY: 1.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1473.7810919287983, oldY: 253.90057217861582, newX: 1473.5810919287983, newY: 255.90057217861582, deltaX: -0.20000000000004547, …}
+enemy.js:64 Enemy update start: {x: 496.6256670553056, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 496.6256670553056, oldY: 770, newX: 497.6892197827657, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 990.5048977242609, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 990.5048977242609, oldY: 428.6818064729815, newX: 991.8855024295912, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1473.5810919287983, y: 255.90057217861582, velocityX: -0.2, velocityY: 2, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1473.5810919287983, oldY: 255.90057217861582, newX: 1473.3310919287983, newY: 258.4005721786158, deltaX: -0.25, …}
+enemy.js:64 Enemy update start: {x: 497.6892197827657, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 497.6892197827657, oldY: 770, newX: 498.7527725102258, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 991.8855024295912, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 991.8855024295912, oldY: 428.6818064729815, newX: 993.2661071349214, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1473.3310919287983, y: 258.4005721786158, velocityX: -0.25, velocityY: 2.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1473.3310919287983, oldY: 258.4005721786158, newX: 1473.0310919287983, newY: 261.4005721786158, deltaX: -0.2999999999999545, …}
+enemy.js:64 Enemy update start: {x: 498.7527725102258, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 498.7527725102258, oldY: 770, newX: 499.8163252376859, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 993.2661071349214, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 993.2661071349214, oldY: 428.6818064729815, newX: 994.6467118402517, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1473.0310919287983, y: 261.4005721786158, velocityX: -0.3, velocityY: 3, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1473.0310919287983, oldY: 261.4005721786158, newX: 1472.6810919287984, newY: 264.9005721786158, deltaX: -0.34999999999990905, …}
+enemy.js:64 Enemy update start: {x: 499.8163252376859, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 499.8163252376859, oldY: 770, newX: 500.87987796514597, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 994.6467118402517, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 994.6467118402517, oldY: 428.6818064729815, newX: 996.0273165455819, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1472.6810919287984, y: 264.9005721786158, velocityX: -0.35, velocityY: 3.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1472.6810919287984, oldY: 264.9005721786158, newX: 1472.2810919287983, newY: 268.9005721786158, deltaX: -0.40000000000009095, …}
+enemy.js:64 Enemy update start: {x: 500.87987796514597, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 500.87987796514597, oldY: 770, newX: 501.94343069260606, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 996.0273165455819, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 996.0273165455819, oldY: 428.6818064729815, newX: 997.4079212509122, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1472.2810919287983, y: 268.9005721786158, velocityX: -0.39999999999999997, velocityY: 4, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1472.2810919287983, oldY: 268.9005721786158, newX: 1471.8310919287983, newY: 273.4005721786158, deltaX: -0.4500000000000455, …}
+enemy.js:64 Enemy update start: {x: 501.94343069260606, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 501.94343069260606, oldY: 770, newX: 503.00698342006615, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 997.4079212509122, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 997.4079212509122, oldY: 428.6818064729815, newX: 998.7885259562424, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1471.8310919287983, y: 273.4005721786158, velocityX: -0.44999999999999996, velocityY: 4.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1471.8310919287983, oldY: 273.4005721786158, newX: 1471.3310919287983, newY: 278.4005721786158, deltaX: -0.5, …}
+enemy.js:64 Enemy update start: {x: 503.00698342006615, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 503.00698342006615, oldY: 770, newX: 504.07053614752624, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 998.7885259562424, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 998.7885259562424, oldY: 428.6818064729815, newX: 1000.1691306615727, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1471.3310919287983, y: 278.4005721786158, velocityX: -0.49999999999999994, velocityY: 5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1471.3310919287983, oldY: 278.4005721786158, newX: 1470.7810919287983, newY: 283.9005721786158, deltaX: -0.5499999999999545, …}
+enemy.js:64 Enemy update start: {x: 504.07053614752624, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 504.07053614752624, oldY: 770, newX: 505.13408887498633, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1000.1691306615727, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1000.1691306615727, oldY: 428.6818064729815, newX: 1001.549735366903, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1470.7810919287983, y: 283.9005721786158, velocityX: -0.5499999999999999, velocityY: 5.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1470.7810919287983, oldY: 283.9005721786158, newX: 1470.1810919287984, newY: 289.9005721786158, deltaX: -0.599999999999909, …}
+enemy.js:64 Enemy update start: {x: 505.13408887498633, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 505.13408887498633, oldY: 770, newX: 506.1976416024464, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1001.549735366903, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1001.549735366903, oldY: 428.6818064729815, newX: 1002.9303400722332, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1470.1810919287984, y: 289.9005721786158, velocityX: -0.6, velocityY: 6, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1470.1810919287984, oldY: 289.9005721786158, newX: 1469.5310919287983, newY: 296.4005721786158, deltaX: -0.650000000000091, …}
+enemy.js:64 Enemy update start: {x: 506.1976416024464, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 506.1976416024464, oldY: 770, newX: 507.2611943299065, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1002.9303400722332, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1002.9303400722332, oldY: 428.6818064729815, newX: 1004.3109447775635, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1469.5310919287983, y: 296.4005721786158, velocityX: -0.65, velocityY: 6.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1469.5310919287983, oldY: 296.4005721786158, newX: 1468.8310919287983, newY: 303.4005721786158, deltaX: -0.7000000000000455, …}
+enemy.js:64 Enemy update start: {x: 507.2611943299065, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 507.2611943299065, oldY: 770, newX: 508.3247470573666, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1004.3109447775635, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1004.3109447775635, oldY: 428.6818064729815, newX: 1005.6915494828937, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1468.8310919287983, y: 303.4005721786158, velocityX: -0.7000000000000001, velocityY: 7, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1468.8310919287983, oldY: 303.4005721786158, newX: 1468.0810919287983, newY: 310.9005721786158, deltaX: -0.75, …}
+enemy.js:64 Enemy update start: {x: 508.3247470573666, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 508.3247470573666, oldY: 770, newX: 509.3882997848267, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1005.6915494828937, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1005.6915494828937, oldY: 428.6818064729815, newX: 1007.072154188224, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1468.0810919287983, y: 310.9005721786158, velocityX: -0.7500000000000001, velocityY: 7.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1468.0810919287983, oldY: 310.9005721786158, newX: 1467.2810919287983, newY: 318.9005721786158, deltaX: -0.7999999999999545, …}
+enemy.js:64 Enemy update start: {x: 509.3882997848267, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 509.3882997848267, oldY: 770, newX: 510.4518525122868, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1007.072154188224, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1007.072154188224, oldY: 428.6818064729815, newX: 1008.4527588935542, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1467.2810919287983, y: 318.9005721786158, velocityX: -0.8000000000000002, velocityY: 8, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1467.2810919287983, oldY: 318.9005721786158, newX: 1466.4310919287984, newY: 327.4005721786158, deltaX: -0.849999999999909, …}
+enemy.js:64 Enemy update start: {x: 510.4518525122868, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 510.4518525122868, oldY: 770, newX: 511.5154052397469, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1008.4527588935542, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1008.4527588935542, oldY: 428.6818064729815, newX: 1009.8333635988845, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1466.4310919287984, y: 327.4005721786158, velocityX: -0.8500000000000002, velocityY: 8.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1466.4310919287984, oldY: 327.4005721786158, newX: 1465.5310919287983, newY: 336.4005721786158, deltaX: -0.900000000000091, …}
+enemy.js:64 Enemy update start: {x: 511.5154052397469, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 511.5154052397469, oldY: 770, newX: 512.578957967207, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1009.8333635988845, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1009.8333635988845, oldY: 428.6818064729815, newX: 1011.2139683042147, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1465.5310919287983, y: 336.4005721786158, velocityX: -0.9000000000000002, velocityY: 9, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1465.5310919287983, oldY: 336.4005721786158, newX: 1464.5810919287983, newY: 345.9005721786158, deltaX: -0.9500000000000455, …}
+enemy.js:64 Enemy update start: {x: 512.578957967207, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 512.578957967207, oldY: 770, newX: 513.6425106946671, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1011.2139683042147, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1011.2139683042147, oldY: 428.6818064729815, newX: 1012.594573009545, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1464.5810919287983, y: 345.9005721786158, velocityX: -0.9500000000000003, velocityY: 9.5, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1464.5810919287983, oldY: 345.9005721786158, newX: 1463.5810919287983, newY: 355.9005721786158, deltaX: -1, …}
+enemy.js:64 Enemy update start: {x: 513.6425106946671, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 513.6425106946671, oldY: 770, newX: 514.7060634221272, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1012.594573009545, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1012.594573009545, oldY: 428.6818064729815, newX: 1013.9751777148753, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1463.5810919287983, y: 355.9005721786158, velocityX: -1.0000000000000002, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1463.5810919287983, oldY: 355.9005721786158, newX: 1462.5310919287983, newY: 365.9005721786158, deltaX: -1.0499999999999545, …}
+enemy.js:64 Enemy update start: {x: 514.7060634221272, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 514.7060634221272, oldY: 770, newX: 515.7696161495873, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1013.9751777148753, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1013.9751777148753, oldY: 428.6818064729815, newX: 1015.3557824202055, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1462.5310919287983, y: 365.9005721786158, velocityX: -1.0500000000000003, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1462.5310919287983, oldY: 365.9005721786158, newX: 1461.4310919287984, newY: 375.9005721786158, deltaX: -1.099999999999909, …}
+enemy.js:64 Enemy update start: {x: 515.7696161495873, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 515.7696161495873, oldY: 770, newX: 516.8331688770473, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1015.3557824202055, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1015.3557824202055, oldY: 428.6818064729815, newX: 1016.7363871255358, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1461.4310919287984, y: 375.9005721786158, velocityX: -1.1000000000000003, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1461.4310919287984, oldY: 375.9005721786158, newX: 1460.2810919287983, newY: 385.9005721786158, deltaX: -1.150000000000091, …}
+enemy.js:64 Enemy update start: {x: 516.8331688770473, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 516.8331688770473, oldY: 770, newX: 517.8967216045074, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1016.7363871255358, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1016.7363871255358, oldY: 428.6818064729815, newX: 1018.116991830866, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1460.2810919287983, y: 385.9005721786158, velocityX: -1.1500000000000004, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1460.2810919287983, oldY: 385.9005721786158, newX: 1459.1026846712616, newY: 395.9005721786158, deltaX: -1.178407257536719, …}
+enemy.js:64 Enemy update start: {x: 517.8967216045074, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 517.8967216045074, oldY: 770, newX: 518.9602743319675, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1018.116991830866, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1018.116991830866, oldY: 428.6818064729815, newX: 1019.4975965361963, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1459.1026846712616, y: 395.9005721786158, velocityX: -1.178407257536816, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1459.1026846712616, oldY: 395.9005721786158, newX: 1457.924277413725, newY: 405.9005721786158, deltaX: -1.178407257536719, …}
+enemy.js:64 Enemy update start: {x: 518.9602743319675, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 518.9602743319675, oldY: 770, newX: 520.0238270594276, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1019.4975965361963, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1019.4975965361963, oldY: 428.6818064729815, newX: 1020.8782012415265, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1457.924277413725, y: 405.9005721786158, velocityX: -1.178407257536816, velocityY: 10, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1457.924277413725, oldY: 405.9005721786158, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.15585023459039, …}
+enemy.js:64 Enemy update start: {x: 520.0238270594276, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 520.0238270594276, oldY: 770, newX: 521.0873797868877, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1020.8782012415265, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1020.8782012415265, oldY: 428.6818064729815, newX: 1022.2588059468568, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 521.0873797868877, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 521.0873797868877, oldY: 770, newX: 522.1509325143478, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1022.2588059468568, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1022.2588059468568, oldY: 428.6818064729815, newX: 1023.639410652187, newY: 428.6818064729815, deltaX: 1.3806047053302564, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 522.1509325143478, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 522.1509325143478, oldY: 770, newX: 523.2144852418079, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1023.639410652187, y: 428.6818064729815, velocityX: 1.3806047053302124, velocityY: 0.1, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1023.639410652187, oldY: 428.6818064729815, newX: 1025.0200153575172, newY: 429.28180647298154, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 523.2144852418079, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 523.2144852418079, oldY: 770, newX: 524.278037969268, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1025.0200153575172, y: 429.28180647298154, velocityX: 1.3806047053302124, velocityY: 0.6, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1025.0200153575172, oldY: 429.28180647298154, newX: 1026.4006200628473, newY: 430.38180647298157, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 524.278037969268, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 524.278037969268, oldY: 770, newX: 525.3415906967281, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1026.4006200628473, y: 430.38180647298157, velocityX: 1.3806047053302124, velocityY: 1.1, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1026.4006200628473, oldY: 430.38180647298157, newX: 1027.7812247681775, newY: 431.9818064729816, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 525.3415906967281, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 525.3415906967281, oldY: 770, newX: 526.4051434241882, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1027.7812247681775, y: 431.9818064729816, velocityX: 1.3806047053302124, velocityY: 1.6, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1027.7812247681775, oldY: 431.9818064729816, newX: 1029.1618294735076, newY: 434.0818064729816, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 526.4051434241882, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 526.4051434241882, oldY: 770, newX: 527.4686961516483, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1029.1618294735076, y: 434.0818064729816, velocityX: 1.3806047053302124, velocityY: 2.1, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1029.1618294735076, oldY: 434.0818064729816, newX: 1030.5424341788378, newY: 436.68180647298163, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 527.4686961516483, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 527.4686961516483, oldY: 770, newX: 528.5322488791084, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1030.5424341788378, y: 436.68180647298163, velocityX: 1.3806047053302124, velocityY: 2.6, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1030.5424341788378, oldY: 436.68180647298163, newX: 1031.923038884168, newY: 439.78180647298166, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 528.5322488791084, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 528.5322488791084, oldY: 770, newX: 529.5958016065684, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1031.923038884168, y: 439.78180647298166, velocityX: 1.3806047053302124, velocityY: 3.1, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1031.923038884168, oldY: 439.78180647298166, newX: 1033.303643589498, newY: 443.3818064729817, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 529.5958016065684, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 529.5958016065684, oldY: 770, newX: 530.6593543340285, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1033.303643589498, y: 443.3818064729817, velocityX: 1.3806047053302124, velocityY: 3.6, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1033.303643589498, oldY: 443.3818064729817, newX: 1034.6842482948282, newY: 447.4818064729817, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 530.6593543340285, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 530.6593543340285, oldY: 770, newX: 531.7229070614886, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1034.6842482948282, y: 447.4818064729817, velocityX: 1.3806047053302124, velocityY: 4.1, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1034.6842482948282, oldY: 447.4818064729817, newX: 1036.0648530001583, newY: 452.0818064729817, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 531.7229070614886, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 531.7229070614886, oldY: 770, newX: 532.7864597889487, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1036.0648530001583, y: 452.0818064729817, velocityX: 1.3806047053302124, velocityY: 4.6, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1036.0648530001583, oldY: 452.0818064729817, newX: 1037.4454577054885, newY: 457.18180647298175, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 532.7864597889487, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 532.7864597889487, oldY: 770, newX: 533.8500125164088, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1037.4454577054885, y: 457.18180647298175, velocityX: 1.3806047053302124, velocityY: 5.1, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1037.4454577054885, oldY: 457.18180647298175, newX: 1038.8260624108186, newY: 462.78180647298177, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 533.8500125164088, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 533.8500125164088, oldY: 770, newX: 534.9135652438689, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1038.8260624108186, y: 462.78180647298177, velocityX: 1.3806047053302124, velocityY: 5.6, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1038.8260624108186, oldY: 462.78180647298177, newX: 1040.2066671161488, newY: 468.8818064729818, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 534.9135652438689, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 534.9135652438689, oldY: 770, newX: 535.977117971329, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1040.2066671161488, y: 468.8818064729818, velocityX: 1.3806047053302124, velocityY: 6.1, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1040.2066671161488, oldY: 468.8818064729818, newX: 1041.587271821479, newY: 475.4818064729818, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 535.977117971329, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 535.977117971329, oldY: 770, newX: 537.0406706987891, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1041.587271821479, y: 475.4818064729818, velocityX: 1.3806047053302124, velocityY: 6.6, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1041.587271821479, oldY: 475.4818064729818, newX: 1042.967876526809, newY: 482.58180647298184, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 537.0406706987891, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 537.0406706987891, oldY: 770, newX: 538.1042234262492, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1042.967876526809, y: 482.58180647298184, velocityX: 1.3806047053302124, velocityY: 7.1, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1042.967876526809, oldY: 482.58180647298184, newX: 1044.3484812321392, newY: 490.18180647298186, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 538.1042234262492, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 538.1042234262492, oldY: 770, newX: 539.1677761537093, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1044.3484812321392, y: 490.18180647298186, velocityX: 1.3806047053302124, velocityY: 7.6, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1044.3484812321392, oldY: 490.18180647298186, newX: 1045.7290859374693, newY: 498.2818064729819, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 539.1677761537093, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 539.1677761537093, oldY: 770, newX: 540.2313288811694, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1045.7290859374693, y: 498.2818064729819, velocityX: 1.3806047053302124, velocityY: 8.1, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1045.7290859374693, oldY: 498.2818064729819, newX: 1047.1096906427995, newY: 506.8818064729819, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 540.2313288811694, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 540.2313288811694, oldY: 770, newX: 541.2948816086295, newY: 770, deltaX: 1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1047.1096906427995, y: 506.8818064729819, velocityX: 1.3806047053302124, velocityY: 8.6, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1047.1096906427995, oldY: 506.8818064729819, newX: 1048.4902953481296, newY: 515.9818064729819, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 541.2948816086295, y: 770, velocityX: 1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 541.2948816086295, oldY: 770, newX: 542.2584343360895, newY: 770, deltaX: 0.963552727460069, …}
+enemy.js:64 Enemy update start: {x: 1048.4902953481296, y: 515.9818064729819, velocityX: 1.3806047053302124, velocityY: 9.1, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1048.4902953481296, oldY: 515.9818064729819, newX: 1049.8709000534598, newY: 525.581806472982, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 542.2584343360895, y: 770, velocityX: 0.9635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 542.2584343360895, oldY: 770, newX: 543.1219870635496, newY: 770, deltaX: 0.8635527274600463, …}
+enemy.js:64 Enemy update start: {x: 1049.8709000534598, y: 525.581806472982, velocityX: 1.3806047053302124, velocityY: 9.6, isOnGround: false, …}
+enemy.js:118 Enemy update end: {oldX: 1049.8709000534598, oldY: 525.581806472982, newX: 1051.25150475879, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 543.1219870635496, y: 770, velocityX: 0.8635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 543.1219870635496, oldY: 770, newX: 543.8855397910097, newY: 770, deltaX: 0.7635527274601372, …}
+enemy.js:64 Enemy update start: {x: 1051.25150475879, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1051.25150475879, oldY: 535.627678404323, newX: 1052.63210946412, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 543.8855397910097, y: 770, velocityX: 0.763552727460099, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 543.8855397910097, oldY: 770, newX: 544.5490925184698, newY: 770, deltaX: 0.6635527274601145, …}
+enemy.js:64 Enemy update start: {x: 1052.63210946412, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1052.63210946412, oldY: 535.627678404323, newX: 1054.0127141694502, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 544.5490925184698, y: 770, velocityX: 0.663552727460099, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 544.5490925184698, oldY: 770, newX: 545.1126452459299, newY: 770, deltaX: 0.5635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1054.0127141694502, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1054.0127141694502, oldY: 535.627678404323, newX: 1055.3933188747803, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 545.1126452459299, y: 770, velocityX: 0.563552727460099, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 545.1126452459299, oldY: 770, newX: 545.57619797339, newY: 770, deltaX: 0.46355272746006904, …}
+enemy.js:64 Enemy update start: {x: 1055.3933188747803, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1055.3933188747803, oldY: 535.627678404323, newX: 1056.7739235801105, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 545.57619797339, y: 770, velocityX: 0.463552727460099, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 545.57619797339, oldY: 770, newX: 545.93975070085, newY: 770, deltaX: 0.3635527274600463, …}
+enemy.js:64 Enemy update start: {x: 1056.7739235801105, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1056.7739235801105, oldY: 535.627678404323, newX: 1058.1545282854406, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 545.93975070085, y: 770, velocityX: 0.36355272746009903, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 545.93975070085, oldY: 770, newX: 546.2033034283102, newY: 770, deltaX: 0.26355272746013725, …}
+enemy.js:64 Enemy update start: {x: 1058.1545282854406, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1058.1545282854406, oldY: 535.627678404323, newX: 1059.5351329907708, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 546.2033034283102, y: 770, velocityX: 0.26355272746009906, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 546.2033034283102, oldY: 770, newX: 546.3668561557703, newY: 770, deltaX: 0.1635527274601145, …}
+enemy.js:64 Enemy update start: {x: 1059.5351329907708, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1059.5351329907708, oldY: 535.627678404323, newX: 1060.915737696101, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 546.3668561557703, y: 770, velocityX: 0.16355272746009905, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 546.3668561557703, oldY: 770, newX: 546.4304088832304, newY: 770, deltaX: 0.06355272746009177, …}
+enemy.js:64 Enemy update start: {x: 1060.915737696101, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1060.915737696101, oldY: 535.627678404323, newX: 1062.296342401431, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 546.4304088832304, y: 770, velocityX: 0.06355272746009905, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 546.4304088832304, oldY: 770, newX: 546.3939616106904, newY: 770, deltaX: -0.036447272539930964, …}
+enemy.js:64 Enemy update start: {x: 1062.296342401431, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1062.296342401431, oldY: 535.627678404323, newX: 1063.6769471067612, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 546.3939616106904, y: 770, velocityX: -0.03644727253990096, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 546.3939616106904, oldY: 770, newX: 546.2575143381505, newY: 770, deltaX: -0.1364472725399537, …}
+enemy.js:64 Enemy update start: {x: 1063.6769471067612, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1063.6769471067612, oldY: 535.627678404323, newX: 1065.0575518120913, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 546.2575143381505, y: 770, velocityX: -0.13644727253990097, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 546.2575143381505, oldY: 770, newX: 546.0210670656106, newY: 770, deltaX: -0.23644727253986275, …}
+enemy.js:64 Enemy update start: {x: 1065.0575518120913, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1065.0575518120913, oldY: 535.627678404323, newX: 1066.4381565174215, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 546.0210670656106, y: 770, velocityX: -0.23644727253990097, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 546.0210670656106, oldY: 770, newX: 545.6846197930707, newY: 770, deltaX: -0.3364472725398855, …}
+enemy.js:64 Enemy update start: {x: 1066.4381565174215, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1066.4381565174215, oldY: 535.627678404323, newX: 1067.8187612227516, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 545.6846197930707, y: 770, velocityX: -0.336447272539901, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 545.6846197930707, oldY: 770, newX: 545.2481725205308, newY: 770, deltaX: -0.4364472725399082, …}
+enemy.js:64 Enemy update start: {x: 1067.8187612227516, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1067.8187612227516, oldY: 535.627678404323, newX: 1069.1993659280818, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 545.2481725205308, y: 770, velocityX: -0.436447272539901, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 545.2481725205308, oldY: 770, newX: 544.7117252479909, newY: 770, deltaX: -0.536447272539931, …}
+enemy.js:64 Enemy update start: {x: 1069.1993659280818, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1069.1993659280818, oldY: 535.627678404323, newX: 1070.579970633412, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 544.7117252479909, y: 770, velocityX: -0.536447272539901, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 544.7117252479909, oldY: 770, newX: 544.075277975451, newY: 770, deltaX: -0.6364472725399537, …}
+enemy.js:64 Enemy update start: {x: 1070.579970633412, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1070.579970633412, oldY: 535.627678404323, newX: 1071.960575338742, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 544.075277975451, y: 770, velocityX: -0.636447272539901, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 544.075277975451, oldY: 770, newX: 543.3388307029111, newY: 770, deltaX: -0.7364472725398628, …}
+enemy.js:64 Enemy update start: {x: 1071.960575338742, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1071.960575338742, oldY: 535.627678404323, newX: 1073.3411800440722, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 543.3388307029111, y: 770, velocityX: -0.7364472725399009, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 543.3388307029111, oldY: 770, newX: 542.5023834303712, newY: 770, deltaX: -0.8364472725398855, …}
+enemy.js:64 Enemy update start: {x: 1073.3411800440722, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1073.3411800440722, oldY: 535.627678404323, newX: 1074.7217847494023, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 542.5023834303712, y: 770, velocityX: -0.8364472725399009, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 542.5023834303712, oldY: 770, newX: 541.5659361578313, newY: 770, deltaX: -0.9364472725399082, …}
+enemy.js:64 Enemy update start: {x: 1074.7217847494023, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1074.7217847494023, oldY: 535.627678404323, newX: 1076.1023894547325, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 541.5659361578313, y: 770, velocityX: -0.9364472725399009, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 541.5659361578313, oldY: 770, newX: 540.5294888852914, newY: 770, deltaX: -1.036447272539931, …}
+enemy.js:64 Enemy update start: {x: 1076.1023894547325, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1076.1023894547325, oldY: 535.627678404323, newX: 1077.4829941600626, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 540.5294888852914, y: 770, velocityX: -1.036447272539901, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 540.5294888852914, oldY: 770, newX: 539.4659361578313, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1077.4829941600626, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1077.4829941600626, oldY: 535.627678404323, newX: 1078.8635988653928, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 539.4659361578313, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 539.4659361578313, oldY: 770, newX: 538.4023834303712, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1078.8635988653928, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1078.8635988653928, oldY: 535.627678404323, newX: 1080.244203570723, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 538.4023834303712, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 538.4023834303712, oldY: 770, newX: 537.3388307029111, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1080.244203570723, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1080.244203570723, oldY: 535.627678404323, newX: 1081.624808276053, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 537.3388307029111, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 537.3388307029111, oldY: 770, newX: 536.275277975451, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1081.624808276053, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1081.624808276053, oldY: 535.627678404323, newX: 1083.0054129813832, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 536.275277975451, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 536.275277975451, oldY: 770, newX: 535.2117252479909, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1083.0054129813832, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1083.0054129813832, oldY: 535.627678404323, newX: 1084.3860176867133, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 535.2117252479909, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 535.2117252479909, oldY: 770, newX: 534.1481725205308, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1084.3860176867133, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1084.3860176867133, oldY: 535.627678404323, newX: 1085.7666223920435, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 534.1481725205308, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 534.1481725205308, oldY: 770, newX: 533.0846197930707, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1085.7666223920435, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1085.7666223920435, oldY: 535.627678404323, newX: 1087.1472270973736, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 533.0846197930707, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 533.0846197930707, oldY: 770, newX: 532.0210670656106, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1087.1472270973736, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1087.1472270973736, oldY: 535.627678404323, newX: 1088.5278318027038, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 532.0210670656106, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 532.0210670656106, oldY: 770, newX: 530.9575143381505, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1088.5278318027038, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1088.5278318027038, oldY: 535.627678404323, newX: 1089.908436508034, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 530.9575143381505, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 530.9575143381505, oldY: 770, newX: 529.8939616106904, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1089.908436508034, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1089.908436508034, oldY: 535.627678404323, newX: 1091.289041213364, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 529.8939616106904, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 529.8939616106904, oldY: 770, newX: 528.8304088832303, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1091.289041213364, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1091.289041213364, oldY: 535.627678404323, newX: 1092.6696459186942, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 528.8304088832303, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 528.8304088832303, oldY: 770, newX: 527.7668561557703, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1092.6696459186942, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1092.6696459186942, oldY: 535.627678404323, newX: 1094.0502506240243, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 527.7668561557703, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 527.7668561557703, oldY: 770, newX: 526.7033034283102, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1094.0502506240243, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1094.0502506240243, oldY: 535.627678404323, newX: 1095.4308553293545, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 526.7033034283102, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 526.7033034283102, oldY: 770, newX: 525.6397507008501, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1095.4308553293545, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1095.4308553293545, oldY: 535.627678404323, newX: 1096.8114600346846, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 525.6397507008501, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 525.6397507008501, oldY: 770, newX: 524.57619797339, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1096.8114600346846, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1096.8114600346846, oldY: 535.627678404323, newX: 1098.1920647400148, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 524.57619797339, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 524.57619797339, oldY: 770, newX: 523.5126452459299, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1098.1920647400148, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1098.1920647400148, oldY: 535.627678404323, newX: 1099.572669445345, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 523.5126452459299, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 523.5126452459299, oldY: 770, newX: 522.4490925184698, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1099.572669445345, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1099.572669445345, oldY: 535.627678404323, newX: 1100.953274150675, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1457.6962179750299, y: 418.7967016693116, velocityX: -1.078407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1457.6962179750299, oldY: 418.7967016693116, newX: 1555.0801276483153, newY: 418.7967016693116, deltaX: 97.38390967328542, …}
+enemy.js:64 Enemy update start: {x: 522.4490925184698, y: 770, velocityX: -1.0635527274600989, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 522.4490925184698, oldY: 770, newX: 521.3855397910097, newY: 770, deltaX: -1.0635527274600918, …}
+enemy.js:64 Enemy update start: {x: 1100.953274150675, y: 535.627678404323, velocityX: 1.3806047053302124, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1100.953274150675, oldY: 535.627678404323, newX: 1102.3338788560052, newY: 535.627678404323, deltaX: 1.3806047053301427, …}
+enemy.js:64 Enemy update start: {x: 1555.0801276483153, y: 418.7967016693116, velocityX: -1.178407257536816, velocityY: 0, isOnGround: true, …}
+enemy.js:118 Enemy update end: {oldX: 1555.0801276483153, oldY: 418.7967016693116, newX: 1457.6962179750299, newY: 418.7967016693116, deltaX: -97.38390967328542, …}
