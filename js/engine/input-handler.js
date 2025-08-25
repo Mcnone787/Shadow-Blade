@@ -16,7 +16,8 @@ class InputHandler {
             ArrowLeft: false,
             ArrowRight: false,
             Enter: false,
-            Space: false
+            Space: false,
+            ShiftLeft: false
         };
         
         // Para el doble salto

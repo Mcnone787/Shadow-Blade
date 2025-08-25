@@ -26,6 +26,7 @@ class GameEngine {
         this.enemies = [];
         this.platforms = [];
         this.powerUps = [];
+        this.traps = [];
         
         // UI
         this.hud = new HUD(this.ctx);
@@ -35,9 +36,12 @@ class GameEngine {
         // Temporizadores
         this.enemySpawnTimer = Date.now();
         this.powerUpSpawnTimer = Date.now();
+        this.trapSpawnTimer = Date.now();
         this.ENEMY_SPAWN_INTERVAL = 1500; // 1.5 segundos - Spawn muy frecuente
         this.POWERUP_SPAWN_INTERVAL = 8000; // 8 segundos entre power-ups
+        this.TRAP_SPAWN_INTERVAL = 3000; // 3 segundos entre trampas
         this.MAX_ENEMIES = 8; // Máximo de enemigos simultáneos
+        this.MAX_TRAPS = 4; // Máximo de trampas simultáneas
     }
 
     async init() {
@@ -161,6 +165,29 @@ class GameEngine {
             return powerUp.y < this.canvas.height;
         });
 
+        // Generar y actualizar trampas
+        if (this.traps.length < this.MAX_TRAPS && 
+            Date.now() - this.trapSpawnTimer > this.TRAP_SPAWN_INTERVAL) {
+            const x = Math.random() * (this.canvas.width - 30);
+            const trap = new Trap(x, -30);
+            this.traps.push(trap);
+            this.trapSpawnTimer = Date.now();
+        }
+
+        // Actualizar trampas y comprobar colisiones
+        this.traps = this.traps.filter(trap => {
+            trap.update();
+
+            // Comprobar si el jugador colisiona con la trampa
+            if (trap.checkCollision(this.player)) {
+                this.player.takeDamage(trap.damage);
+                return false;
+            }
+
+            // Eliminar trampas que caen fuera de la pantalla
+            return trap.y < this.canvas.height;
+        });
+
         // Comprobar colisiones
         this.collisionSystem.checkPlatformCollisions(this.player, this.platforms);
         this.collisionSystem.checkAttackCollisions(this.player, this.enemies);
@@ -200,8 +227,9 @@ class GameEngine {
         // Renderizar plataformas
         this.platforms.forEach(platform => platform.render(this.ctx));
         
-        // Renderizar power-ups
+        // Renderizar power-ups y trampas
         this.powerUps.forEach(powerUp => powerUp.render(this.ctx));
+        this.traps.forEach(trap => trap.render(this.ctx));
         
         // Renderizar jugador
         this.player.render(this.ctx, this.spriteLoader);
@@ -334,6 +362,7 @@ class GameEngine {
         // Limpiar entidades
         this.enemies = [];
         this.powerUps = [];
+        this.traps = [];
         
         // Resetear canvas y dimensiones
         this.canvas.width = window.innerWidth;

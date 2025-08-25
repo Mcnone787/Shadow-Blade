@@ -47,9 +47,11 @@ class Player {
         
         // Constantes de movimiento (valores originales)
         this.MOVEMENT_SPEED = 5;
+        this.RUN_SPEED = 8; // Velocidad de carrera
         this.JUMP_FORCE = -25;
         this.GRAVITY = 0.8;
         this.HORIZONTAL_BOOST = 1.8;
+        this.isRunning = false;
         
         // Animación
         this.currentFrame = 0;
@@ -97,6 +99,9 @@ class Player {
     }
 
     handleMovement(inputHandler) {
+        // Actualizar estado de carrera (Shift)
+        this.isRunning = inputHandler.isKeyPressed('ShiftLeft');
+
         // Movimiento horizontal
         if (inputHandler.isKeyPressed('d') && !inputHandler.isKeyPressed('a')) {
             this.moveRight();
@@ -165,7 +170,7 @@ class Player {
     }
 
     moveRight() {
-        let speed = this.MOVEMENT_SPEED;
+        let speed = this.isRunning ? this.RUN_SPEED : this.MOVEMENT_SPEED;
         if (!this.isOnGround) {
             speed *= this.HORIZONTAL_BOOST;
         }
@@ -175,7 +180,7 @@ class Player {
     }
 
     moveLeft() {
-        let speed = this.MOVEMENT_SPEED;
+        let speed = this.isRunning ? this.RUN_SPEED : this.MOVEMENT_SPEED;
         if (!this.isOnGround) {
             speed *= this.HORIZONTAL_BOOST;
         }
