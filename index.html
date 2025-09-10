@@ -43,13 +43,61 @@
         
     <!-- <h1>Menu</h1> -->
     <ul>
-        <li><a href="game.html">Play</a></li>
-        <li><a href="option.html">Options</a></li>
-        <li><a href="about.html">Exit</a></li>
+        <li><a href="game.html">Jugar</a></li>
+        <li class="disabled"><span>Opciones</span></li>
     </ul>
 </div>
 
 
 <script src="iconsound.js"></script>
+<script>
+function exitGame() {
+    if (confirm('¿Estás seguro de que quieres salir?')) {
+        // Intentar diferentes métodos para cerrar/salir
+        try {
+            // Método 1: Intentar cerrar la ventana
+            window.close();
+        } catch(e) {
+            // Método 2: Si no puede cerrar, ir atrás en el historial
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                // Método 3: Redirigir a una página en blanco o de despedida
+                document.body.innerHTML = `
+                    <div style="
+                        display: flex; 
+                        justify-content: center; 
+                        align-items: center; 
+                        height: 100vh; 
+                        background: linear-gradient(45deg, #2c3e50, #34495e);
+                        color: white; 
+                        font-family: 'Jersey 10', sans-serif; 
+                        font-size: 32px;
+                        text-align: center;
+                        flex-direction: column;
+                    ">
+                        <h1>¡Gracias por jugar!</h1>
+                        <p style="font-size: 18px; margin-top: 20px;">
+                            Puedes cerrar esta pestaña manualmente
+                        </p>
+                        <button onclick="window.location.reload()" style="
+                            margin-top: 20px; 
+                            padding: 10px 20px; 
+                            font-size: 16px; 
+                            background: #3498db; 
+                            color: white; 
+                            border: none; 
+                            border-radius: 5px; 
+                            cursor: pointer;
+                        ">
+                            Volver al juego
+                        </button>
+                    </div>
+                `;
+            }
+        }
+    }
+}
+</script>
 </body>
 </html>

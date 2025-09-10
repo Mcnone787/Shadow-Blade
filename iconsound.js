@@ -357,7 +357,7 @@ document.addEventListener('click', () => {
     const fadeIn = setInterval(() => {
         if (vol < 1) {
             vol += 0.1;
-            audio.volume = vol;
+            audio.volume = Math.min(1, vol); // Asegurar que no pase de 1
         } else {
             clearInterval(fadeIn);
         }

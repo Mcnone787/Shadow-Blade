@@ -6,6 +6,7 @@ class GameEngine {
         
         // Estado del juego
         this.isPaused = false;
+        this.isPausedForControls = false; // Nueva variable para pausa por controles
         this.isGameOver = false;
         this.score = 0;
         this.isInvincible = false;
@@ -32,6 +33,7 @@ class GameEngine {
         this.hud = new HUD(this.ctx);
         this.pauseMenu = new PauseMenu(this.ctx);
         this.tooltip = new Tooltip();
+        this.controlsLegend = new ControlsLegend(this.ctx);
 
         // Temporizadores
         this.enemySpawnTimer = Date.now();
@@ -106,7 +108,7 @@ class GameEngine {
     }
 
     update() {
-        if (this.isPaused) return;
+        if (this.isPaused || this.isPausedForControls) return;
 
         if (this.isGameOver) {
             if (this.inputHandler.isKeyPressed('r')) {
@@ -243,6 +245,9 @@ class GameEngine {
         // Renderizar tooltips
         this.tooltip.render(this.ctx);
         
+        // Renderizar leyenda de controles
+        this.controlsLegend.render();
+        
         // Eliminar completamente la visualización de hitboxes
         
         // Renderizar menú de pausa
@@ -330,6 +335,16 @@ class GameEngine {
         } else {
             this.audioManager.resumeMusic();
         }
+    }
+
+    pauseForControls() {
+        this.isPausedForControls = true;
+        this.audioManager.pauseMusic();
+    }
+
+    resumeFromControls() {
+        this.isPausedForControls = false;
+        this.audioManager.resumeMusic();
     }
 
     toggleInvincible() {
